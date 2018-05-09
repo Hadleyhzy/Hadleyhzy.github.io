@@ -9,10 +9,6 @@ key: page-about
 ---
 
 
-<!-- {% highlight    %}
-Hello/Halo/你好，this is my blog! :earth_asia: :earth_africa: :earth_americas:
-{% endhighlight %} -->
-
 ## Resume
 
 - Software Engineer, KNAPP, Graz, Austria                                             Jan.2018-Present
