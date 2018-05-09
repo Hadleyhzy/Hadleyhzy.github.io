@@ -19,21 +19,21 @@
 text_color_theme: forest # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
 url: https://hadleyhzy.github.io # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl: # does not include hostname
-title: Hadley_Henrik
+title: Hadley_Henrik_Hou
 description: > # this means to ignore newlines until "Language & timezone"
-  Hadley_Henrik
+  Hadley_Henrik_Hou
 
 
 ## => Language and Timezone
 ##############################
 lang: en # the language of your site, "en" (default, English), "zh"(简体中文), "zh-Hans"(简体中文), "zh-Hant"(繁體中文)
-timezone: UTC # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
+timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
 
 
 ## => Author and Social
 ##############################
 author:
-  name: Hadley_Henrik
+  name: Hadley_Henrik_Hou
   email: Hadley_hzy@hotmail.com # your Email address e.g. someone@site.com
   facebook: # your Facebook username
   twitter: # your Twitter username
