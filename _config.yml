@@ -16,7 +16,7 @@
 
 ## => Site Settings
 ##############################
-text_color_theme: forest # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
+text_color_theme: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
 url: https://hadleyhzy.github.io # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl: # does not include hostname
 title: Hadley_Henrik_Hou
@@ -46,7 +46,7 @@ author:
 
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
-repository: hadleyhzy/hadleyhzy.github.io
+repository: Hadleyhzy/Hadleyhzy.github.io
 repository_tree: master
 
 
