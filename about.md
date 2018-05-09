@@ -8,15 +8,13 @@ titles:
 key: page-about
 ---
 
-Welcome to my blog! :earth_asia: :earth_africa: :earth_americas:
 
-{% highlight javascript %}
-(() => console.log('hello, world!'))();
+{% highlight    %}
+Hello/Halo/你好，this is my blog! :earth_asia: :earth_africa: :earth_americas:
 {% endhighlight %}
 
-## Skills
+## Resume
 
-- HTML5, CSS3(SASS), JavaScript(ES2017, Node.js), Bash(Zsh)
-- React, React Native, Vue.js
-- gulp, webpack
-- Adobe Photoshop, Sketch
+- Software Engineer, KNAPP, Graz, Austria                                             Jan.2018-Present
+- Master ECE, Northeastern University, Boston, U.S.                                 Sep.2014-June.2016
+- Bachelor ECE, Tianjin University, Tianjin, China                                  Sep.2010-June.2014
