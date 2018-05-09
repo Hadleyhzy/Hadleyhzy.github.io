@@ -9,7 +9,7 @@ key: page-about
 ---
 
 
-{% highlight   javascript %}
+{% highlight    %}
 Hello/Halo/你好，this is my blog! :earth_asia: :earth_africa: :earth_americas:
 {% endhighlight %}
 
