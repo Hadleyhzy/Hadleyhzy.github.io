@@ -7,7 +7,9 @@ titles:
   zh-Hant: 關於
 key: page-about
 ---
+## About me
 
+Hello, my name is Hadley, mein Deutsch Name ist Henrik, welcome to my blog! 
 
 ## Resume
 
