@@ -19,7 +19,7 @@
 text_color_theme: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
 url: https://hadleyhzy.github.io # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl: # does not include hostname
-title: Hadley_Henrik
+title: Hadley_Henrik_Hou
 description: > # this means to ignore newlines until "Language & timezone"
   Hadley_Henrik_Hou
 
@@ -56,7 +56,7 @@ paths:
   base: /
   home: /
   all:  /all.html
-  rss:  /feed.xml
+  ##rss:  /feed.xml
 
 nav_lists:
   - titles:
@@ -80,14 +80,14 @@ toc:
 ## Markdown Enhancements
 
 # Mathjax
-mathjax: # false (default), true
-mathjax_autoNumber: # false (default), true
+mathjax: true # false (default), true
+mathjax_autoNumber: true # false (default), true
 
 # Mermaid
-mermaid: # false (default), true
+mermaid: true # false (default), true
 
 # Chart
-chart: # false (default), true
+chart: true # false (default), true
 
 
 ## => Paginate
@@ -161,7 +161,7 @@ exclude:
 ## => Plugins
 ##############################
 plugins:
-  - jekyll-feed
+  ##- jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap
   - jemoji
