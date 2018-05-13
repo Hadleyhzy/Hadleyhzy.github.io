@@ -76,11 +76,11 @@ STATISTICS:
 #   zh-Hans: "欢迎转载，转载需注明出处，且禁止用于商业目的。"
 #   zh-Hant: "歡迎轉載，轉載需註明出處，且禁止用於商業目的。"
 
-# POST_ON_GITHUB:
-#   en:      "View this POST on Github."
-#   zh:      "在 Github 上查阅此文。"
-#   zh-Hans: "在 Github 上查阅此文。"
-#   zh-Hant: "在 Github 上查閱此文。"
+POST_ON_GITHUB:
+  en:      "View this POST on Github."
+  zh:      "在 Github 上查阅此文。"
+  zh-Hans: "在 Github 上查阅此文。"
+  zh-Hant: "在 Github 上查閱此文。"
 
 # FOLLOW_ME:
 #   en:      "Follow me on [NAME]."

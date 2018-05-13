@@ -35,10 +35,10 @@ timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for
 author:
   name: Hadley_Henrik_Hou
   email: Hadley_hzy@hotmail.com # your Email address e.g. someone@site.com
-  facebook: # your Facebook username
+  facebook:  someone # your Facebook username
   twitter: # your Twitter username
-  github: # your GitHub username
-  linkedin: # your Linkedin username
+  github: someone # your GitHub username
+  linkedin: someone # your Linkedin username
   googleplus: # your Google+ username
   weibo: # your Weibo username
   douban: # your Douban username

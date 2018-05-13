@@ -6,14 +6,19 @@ tags:
   - front end
   - markdown
 ---
-# Heading
-## Heading
-<!--more-->
-### Heading
-#### Heading
-##### Heading
-###### Heading
 
+# Heading
+
+## Heading
+
+### Heading
+
+#### Heading
+<!--more-->
+
+##### Heading
+
+###### Heading
 
 **markdown:**
 ```
@@ -24,8 +29,15 @@ tags:
 ##### Heading
 ###### Heading
 ```
-when using headings, remmeber there must be at least one space between `#` and heading content like `# Heading`, also only two largest sizes of headings have long underscore.
+
+when using headings, remmeber there must be at least one space between `#` and heading content like `# Heading`.
 {:.warning}
+
+`<!--more-->` is a sign to indicate from where above to show in the home page
+{:.warning}
+
+The two largest sizes of headings have long underscore and only first two level headers get header lines.
+{:.info}
 
 First level header
 ==================
