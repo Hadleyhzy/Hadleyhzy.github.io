@@ -10,7 +10,7 @@ tags:
 
 Head over to [GitHub](https://github.com/) and [create a new repository](https://github.com/new) named username.github.io, where username is your username(or organization name) on GitHub.
 
-![Northeastern](/../Pic/N_copy.png "Northeastern"){:width="128px" :height="128px"}
+![repository](/../Pic/051301.png "Repository")
 
 If the first part of the repository doesn't exactly match your username, it won't work, so make sure to get it right.
 {:.warning}
