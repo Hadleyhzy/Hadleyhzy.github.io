@@ -1,28 +1,32 @@
-//Color Theme: default
+///
+// Color Theme: Default
+// Author: Tian Qi
+// Email: kitian616@outlook.com
+///
 
 // main colors
-$main-color-1:     #fc4d50; //text with hyperlink like click to read more
-$text-color-1:     #fff;  //archive tag button background color
+$main-color-1:     #fc4d50;
+$text-color-1:     #fff;
 
-$main-color-2:     #fca24d; //archive:"show all" button background color
-$text-color-2:     #fff;    //archive:"show all" button text color
+$main-color-2:     #fca24d;
+$text-color-2:     #fff;
 
-$main-color-3:     #f2f2f2; //header,ending,home->tags background color
-$text-color-3:     #333;     //heading,ending text color
+$main-color-3:     #f2f2f2;
+$text-color-3:     #333;
 
 // background colors
-$background-color: #fff; //#fff1eb;//#fff;        //main backround color
+$background-color: #fff;
 // text colors
-$text-color-d:     #111;        //home headings
-$text-color:       #333;        //home main text color
-$text-color-l:     #9c9c9c;     //home date text color
-$text-background-color: rgba(#000, .05); //text with assigned color background
+$text-color-d:     #111;
+$text-color:       #333;
+$text-color-l:     #9c9c9c;
+$text-background-color: rgba(#000, .05);
 
 // border and shadow colors
-$border-color:     mix(#000, $background-color, 20%); 
-$border-color-l:   mix(#000, $background-color, 10%);//home border line
-$select-color:     #000;//rgba($main-color-1, .5);
-$decorate-color:   #000;//rgba(#000, .1);
+$border-color:     mix(#000, $background-color, 20%);
+$border-color-l:   mix(#000, $background-color, 10%);
+$select-color:     rgba($main-color-1, .5);
+$decorate-color:   rgba(#000, .1);
 
 // function colors
 $green:           #57c22d;
@@ -39,4 +43,3 @@ $twitter-color:    #1da1f2;
 $douban-color:     #42bd56;
 $github-color:     #000;
 $linkedin-color:   #1074af;
-

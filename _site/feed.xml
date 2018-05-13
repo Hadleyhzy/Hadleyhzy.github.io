@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2018-05-13T19:30:26+02:00</updated><id>http://localhost:4000/</id><title type="html">Hadley_Henrik_Hou</title><subtitle>Hadley_Henrik_Hou's Blog
+</subtitle><author><name>Hadley</name><email>Hadley_hzy@hotmail.com</email></author><entry><title type="html">Markdown Tutorial - Office</title><link href="http://localhost:4000/2018/05/12/markdown-tutorial-office.html" rel="alternate" type="text/html" title="Markdown Tutorial - Office" /><published>2018-05-12T00:00:00+02:00</published><updated>2018-05-12T00:00:00+02:00</updated><id>http://localhost:4000/2018/05/12/markdown%20tutorial-office</id><content type="html" xml:base="http://localhost:4000/2018/05/12/markdown-tutorial-office.html">&lt;h1 id=&quot;links&quot;&gt;Links&lt;/h1&gt;
+
+&lt;h3 id=&quot;henriks-site&quot;&gt;&lt;a href=&quot;http://localhost:4000/2018/05/12/markdown-tutorial-office.html&quot;&gt;Henrik’s Site&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[Henrik's Site](path-to-site)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;with-title&quot;&gt;With Title&lt;/h2&gt;
+
+&lt;h3 id=&quot;henriks-site-1&quot;&gt;&lt;a href=&quot;http://localhost:4000/2018/05/12/markdown-tutorial-office.html&quot; title=&quot;Henrik's Site&quot;&gt;Henrik’s Site&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[Henrik's Site](path-to-site &quot;Henrik's Site&quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;reference-links&quot;&gt;Reference Links&lt;/h2&gt;
+
+&lt;p&gt;My Blog is called &lt;a href=&quot;http://localhost:4000/2018/05/12/markdown-tutorial-office.html&quot;&gt;Henrik’s blog&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;My Blog is called [Henrik's blog][BLOG].
+[BLOG]: path-to-site &quot;Henrik's blog&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p class=&quot;warning&quot;&gt;Remember &lt;a href=&quot;http://localhost:4000/2018/05/12/markdown-tutorial-office.html&quot;&gt;BLOG&lt;/a&gt; tag must be defined at the bottom of markdown document.&lt;/p&gt;
+
+&lt;h2 id=&quot;link-within-a-paragraph&quot;&gt;Link Within A Paragraph&lt;/h2&gt;
+
+&lt;p&gt;Some Information about this blog and me can be found &lt;a href=&quot;http://localhost:4000/2018/05/12/markdown-tutorial-office.html&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Some Information about this blog and me can be found [here](path-to-site)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;images&quot;&gt;Images&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;/../Pic/N.png&quot; alt=&quot;Northeastern&quot; title=&quot;Northeastern&quot; width=&quot;128px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;![Northeastern](path-to-image.png &quot;Northeastern&quot;){:width=&quot;128px&quot; :height=&quot;128px&quot;}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Hadley</name><email>Hadley_hzy@hotmail.com</email></author><category term="front end" /><category term="markdown" /><summary type="html">Links Henrik’s Site markdown: [Henrik's Site](path-to-site)</summary></entry><entry><title type="html">Markdown Tutorial - Font</title><link href="http://localhost:4000/2018/05/11/markdown-tutorial.html" rel="alternate" type="text/html" title="Markdown Tutorial - Font" /><published>2018-05-11T00:00:00+02:00</published><updated>2018-05-11T00:00:00+02:00</updated><id>http://localhost:4000/2018/05/11/markdown%20tutorial</id><content type="html" xml:base="http://localhost:4000/2018/05/11/markdown-tutorial.html">&lt;h1 id=&quot;heading&quot;&gt;Heading&lt;/h1&gt;
+
+&lt;h2 id=&quot;heading-1&quot;&gt;Heading&lt;/h2&gt;
+
+&lt;h3 id=&quot;heading-2&quot;&gt;Heading&lt;/h3&gt;
+
+&lt;h4 id=&quot;heading-3&quot;&gt;Heading&lt;/h4&gt;
+&lt;!--more--&gt;
+
+&lt;h5 id=&quot;heading-4&quot;&gt;Heading&lt;/h5&gt;
+
+&lt;h6 id=&quot;heading-5&quot;&gt;Heading&lt;/h6&gt;
+
+&lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Heading
+## Heading
+### Heading
+#### Heading
+##### Heading
+###### Heading
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p class=&quot;warning&quot;&gt;when using headings, remmeber there must be at least one space between &lt;code class=&quot;highlighter-rouge&quot;&gt;#&lt;/code&gt; and heading content like &lt;code class=&quot;highlighter-rouge&quot;&gt;# Heading&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p class=&quot;warning&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;!--more--&amp;gt;&lt;/code&gt; is a sign to indicate from where above to show in the home page&lt;/p&gt;
+
+&lt;p class=&quot;info&quot;&gt;The two largest sizes of headings have long underscore and only first two level headers get header lines.&lt;/p&gt;
+
+&lt;h1 id=&quot;first-level-header&quot;&gt;First level header&lt;/h1&gt;
+
+&lt;h2 id=&quot;second-level-header&quot;&gt;Second level header&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;First level header
+==================
+
+Second level header
+-----------------
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p class=&quot;warning&quot;&gt;for two consecutive headers, there should be at least one row space, otherwise the second level header will considered as content of the first level header.&lt;/p&gt;
+
+&lt;h2 id=&quot;emphasis&quot;&gt;Emphasis&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;should Old Acquaintance be forgot&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;should Old Acquaintance be forgot&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;should Old Acquaintance be forgot&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;should Old Acquaintance be forgot&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;should Old Acquaintance be forgot&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;*should Old Acquaintance be forgot*
+_should Old Acquaintance be forgot_
+**should Old Acquaintance be forgot**
+__should Old Acquaintance be forgot__
+**_should Old Acquaintance be forgot_**
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p class=&quot;info&quot;&gt;both symbol &lt;code class=&quot;highlighter-rouge&quot;&gt;*&lt;/code&gt; and symbol &lt;code class=&quot;highlighter-rouge&quot;&gt;_&lt;/code&gt; change the character to italic form, both symbol &lt;code class=&quot;highlighter-rouge&quot;&gt;**&lt;/code&gt; and symbol &lt;code class=&quot;highlighter-rouge&quot;&gt;__&lt;/code&gt;change the character to bold form.&lt;/p&gt;
+&lt;p class=&quot;warning&quot;&gt;always create a new row space for returning a new line.&lt;/p&gt;
+
+&lt;h2 id=&quot;alert&quot;&gt;Alert&lt;/h2&gt;
+
+&lt;p class=&quot;success&quot;&gt;Succes Text.&lt;/p&gt;
+
+&lt;p class=&quot;info&quot;&gt;Info Text.&lt;/p&gt;
+
+&lt;p class=&quot;warning&quot;&gt;Warning Text.&lt;/p&gt;
+
+&lt;p class=&quot;error&quot;&gt;Error Text.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;markdown:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Succes Text.
+{:.success}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Info Text.
+{:.info}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Warning Text.
+{:.warning}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Error Text.
+{:.error}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Hadley</name><email>Hadley_hzy@hotmail.com</email></author><category term="front end" /><category term="markdown" /><summary type="html">Heading Heading Heading Heading</summary></entry></feed>

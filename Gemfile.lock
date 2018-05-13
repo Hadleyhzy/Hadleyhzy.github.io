@@ -94,7 +94,6 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1.12)
-  jekyll (~> 3.8)
   jekyll-text-theme!
   rake (~> 10.0)
 

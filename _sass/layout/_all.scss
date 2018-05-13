@@ -21,7 +21,7 @@
     & > .m-search-box {
       position: relative;
       box-sizing: border-box;
-      max-width: 11rem;
+      max-width: 22rem;
       margin: map-get($base, vertical-space-large) 0;
       @include media-breakpoint-down(s) {
         max-width: none;
