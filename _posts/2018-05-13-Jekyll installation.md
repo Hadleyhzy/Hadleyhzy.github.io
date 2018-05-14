@@ -10,9 +10,9 @@ tags:
 ## Requirements
 
 Before you start make sure your system has the following:
-	* Ruby version 2.2.5 or above, including all development header(ruby installation can be checked by running `ruby -v`)
-	* RubyGems(which you can check by running `gem -v`)
-	* GCC and Make(in case your system doesn't have them installed, which you can check by running `gcc -v`, `g++ -v` and `make -v` in your system's command line interface)
+* Ruby version 2.2.5 or above, including all development header( ruby installation can be checked by running `ruby -v`)
+* RubyGems(which you can check by running `gem -v`)
+* GCC and Make(in case your system doesn't have them installed, which you can check by running `gcc -v`, `g++ -v` and `make -v` in your system's command line interface)
 
 ## Install on macOS
 We only cover macOS High Sierra 10.13 here, which comes with Ruby 2.3.3.
@@ -60,4 +60,22 @@ bundle add jekyll
 
 # Install gems
 bundle install
+```
+## Upgrade Jekyll
+Before you start developing with Jekyll, you may want to check that you’re up to date with the latest version. To find the currently installed version of Jekyll, run one of these commands:
+
+```terminal
+jekyll --version
+gem list jekyll
+```
+You can use RubyGems to find the current version of Jekyll. Another way to check if you have the latest version is to run the command `gem outdated`. This will provide a list of all the gems on your system that need to be updated. If you aren’t running the latest version, run this command:
+
+```terminal
+bundle update jekyll
+```
+
+To upgrade to latest Rubygems, run:
+
+```terminal
+gem update --system
 ```
