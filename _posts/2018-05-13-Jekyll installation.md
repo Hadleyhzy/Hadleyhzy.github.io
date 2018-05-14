@@ -22,14 +22,14 @@ If the first part of the repository doesn't exactly match your username, it won'
 
 Go to the folder where you want to store your project, and clone the new repository
 
-```terminal
+```unix
 ~$ git clone https://github.com/username/username.github.io
 ```
 
 ## Hello world
 Enter the project folder and add an index.html file
 
-```terminal
+```unix
 ~$ cd username.github.io
 ~$ echo "Hello World" > index.html
 ```
@@ -37,7 +37,7 @@ Enter the project folder and add an index.html file
 ## Push it
 Add, commit, and push your changes:
 
-```terminal
+```unix
 ~$ git add --all
 ~$ git commit -m "Initial commit"
 ~$ git push -u origin master
