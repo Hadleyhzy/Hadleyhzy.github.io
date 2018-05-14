@@ -1,48 +1,63 @@
 ---
 layout: post
-title: GitHub Pages Tutorial
+title: Jekyll installation
 key: 20180513
 tags:
   - front end
+  - jekyll
 ---
 
-## Create a repository
+## Requirements
 
-Head over to [GitHub](https://github.com/) and [create a new repository](https://github.com/new) named username.github.io, where username is your username(or organization name) on GitHub.
+Before you start make sure your system has the following:
+	* Ruby version 2.2.5 or above, including all development header(ruby installation can be checked by running `ruby -v`)
+	* RubyGems(which you can check by running `gem -v`)
+	* GCC and Make(in case your system doesn't have them installed, which you can check by running `gcc -v`, `g++ -v` and `make -v` in your system's command line interface)
 
-![repository](/../Pic/051301.png "Repository")
+## Install on macOS
+We only cover macOS High Sierra 10.13 here, which comes with Ruby 2.3.3.
 
-If the first part of the repository doesn't exactly match your username, it won't work, so make sure to get it right.
-{:.warning}
+First, you need to install the command-line tools to be able to compile native extensions,open a terminal and run:
+```terminal
+xcode-select --install
+```
+## Install Homebrew
 
-<!--more-->
-## What git client are you using? A terminal
-
-## Clone the repository
-
-Go to the folder where you want to store your project, and clone the new repository
-
-```unix
-~$ git clone https://github.com/username/username.github.io
+```terminal
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-## Hello world
-Enter the project folder and add an index.html file
+## Install a newer Ruby version via Homebrew
 
-```unix
-~$ cd username.github.io
-~$ echo "Hello World" > index.html
+If you wish to install the latest version of Ruby and get faster builds, we recommend to do it via Homebrew a handy package manager for macOS.
+
+```terminal
+brew install ruby
+ruby -v
+ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-darwin16]
 ```
+Now you have a shiny Ruby on your system!
 
-## Push it
-Add, commit, and push your changes:
-
-```unix
-~$ git add --all
-~$ git commit -m "Initial commit"
-~$ git push -u origin master
+Set up Ruby included with the OS
+Check your Ruby version meet our requirements:
+```terminal
+ruby -v
+ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-darwin16]
 ```
+Great, let's install Jekyll. We also need Bundler to help us handle plugins and themes:
 
-## ...and you're done!
-Fire up a browser and go to [https://username.github.io](https://username.github.io)
+```terminal
+gem install bundler jekyll
+```
+Go to github.io directory:
 
+```terminal
+# Create a Gemfile
+bundle init
+
+# Add Jekyll
+bundle add jekyll
+
+# Install gems
+bundle install
+```
