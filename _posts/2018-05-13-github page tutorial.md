@@ -15,6 +15,16 @@ Head over to [GitHub](https://github.com/) and [create a new repository](https:/
 If the first part of the repository doesn't exactly match your username, it won't work, so make sure to get it right.
 {:.warning}
 
+## What git client are you using? A terminal
+
+## Clone the repository
+
+Go to the folder where you want to store your project, and clone the new repository
+
+```terminal
+~$ git clone https://github.com/username/username.github.io
+```
+
 Here is a literal `` ` `` backtick. And here is `some` text.
 
 **markdown:**
