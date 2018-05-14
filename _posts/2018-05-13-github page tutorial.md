@@ -15,208 +15,34 @@ Head over to [GitHub](https://github.com/) and [create a new repository](https:/
 If the first part of the repository doesn't exactly match your username, it won't work, so make sure to get it right.
 {:.warning}
 
+<!--more-->
 ## What git client are you using? A terminal
 
 ## Clone the repository
 
 Go to the folder where you want to store your project, and clone the new repository
 
-```terminal
+```unix
 ~$ git clone https://github.com/username/username.github.io
 ```
 
-Here is a literal `` ` `` backtick. And here is `some` text.
+## Hello world
+Enter the project folder and add an index.html file
 
-**markdown:**
-```
-Here is a literal `` ` `` backtick. And here is `some` text.
-```
-<!--more-->
-
-### Standard Code Blocks
-
-Here comes some code.
-This text belongs to the same code block.
-^
-This one is seperate.
-
-**markdown:**
-```
-Here comes some code.
-This text belongs to the same code block.
-^
-This one is seperate.
+```unix
+~$ cd username.github.io
+~$ echo "Hello World" > index.html
 ```
 
-### javascript highlight
+## Push it
+Add, commit, and push your changes:
 
-```javascript
-(() => console.log('hello, world!'))();
+```unix
+~$ git add --all
+~$ git commit -m "Initial commit"
+~$ git push -u origin master
 ```
 
-**markdown:**
-
-```
-```javascript
-(() => console.log('hello, world!'))();
-```
-
-### Language of Code Blocks
-
-~~~
-for(int i=0;i<max;i++){
-	i++;
-}
-~~~
-{:.language-c++}
-
-**markdown:**
-```
-~~~
-for(int i=0;i<max;i++){
-	i++;
-}
-~~~
-{:.language-c++}
-```
-
-~~~ c++
-for(int i=0;i<max;i++){
-	i++;
-}
-~~~
-
-**markdown:**
-```
-~~~ c++
-for(int i=0;i<max;i++){
-	i++;
-}
-~~~
-```
-
-## Lists
-
-### Unordered list
-* Asia
-* Europe
-	* Austria
-	* France
-	* Italy
-* North America
-
-**markdown:**
-```
-* Asia
-* Europe
-	* Austria
-	* France
-	* Italy
-* North America
-```
-
-### Ordered list
-1. Asia
-2. Europe
-	1. Austria
-	2. France
-	3. Italy
-3. North America
-
-**markdown:**
-```
-1. Asia
-2. Europe
-	1. Austria
-	2. France
-	3. Italy
-3. North America
-```
-
-## Blockquotes
-
-> "There is nothing either good or bad, but thinking makes it so."
->
-> —Hamlet in *Hamlet*
-
-**markdown:**
-```
-> "There is nothing either good or bad, but thinking makes it so."
->
-> —Hamlet in *Hamlet*
-```
-
-## Definition
-kramdown
-: A Markdown-superset converter
-
-Maruku
-: Another Markdown-superset converter
-
-**markdown:**
-```
-kramdown
-: A Markdown-superset converter
-
-Maruku
-: Another Markdown-superset converter
-```
-## Tables
-
-|-----------------+------------+-----------------+----------------|
-| Default aligned |Left aligned| Center aligned  | Right aligned  |
-|-----------------|:-----------|:---------------:|---------------:|
-| First body part |Second cell | Third cell      | fourth cell    |
-| Second line     |foo         | **strong**      | baz            |
-| Third line      |quux        | baz             | bar            |
-|-----------------+------------+-----------------+----------------|
-| Second body     |            |                 |                |
-| 2 line          |            |                 |                |
-|=================+============+=================+================|
-| Footer row      |            |                 |                |
-|-----------------+------------+-----------------+----------------|
-
-**markdown:**
-```
-|-----------------+------------+-----------------+----------------|
-| Default aligned |Left aligned| Center aligned  | Right aligned  |
-|-----------------|:-----------|:---------------:|---------------:|
-| First body part |Second cell | Third cell      | fourth cell    |
-| Second line     |foo         | **strong**      | baz            |
-| Third line      |quux        | baz             | bar            |
-|-----------------+------------+-----------------+----------------|
-| Second body     |            |                 |                |
-| 2 line          |            |                 |                |
-|=================+============+=================+================|
-| Footer row      |            |                 |                |
-|-----------------+------------+-----------------+----------------|
-```
-
-|---
-| Default aligned | Left aligned | Center aligned | Right aligned
-|-|:-|:-:|-:
-| First body part | Second cell | Third cell | fourth cell
-| Second line |foo | **strong** | baz
-| Third line |quux | baz | bar
-|---
-| Second body |x|m
-| 2 line |x|n
-|===
-| Footer row
-
-**markdown:**
-```
-|---
-| Default aligned | Left aligned | Center aligned | Right aligned
-|-|:-|:-:|-:
-| First body part | Second cell | Third cell | fourth cell
-| Second line |foo | **strong** | baz
-| Third line |quux | baz | bar
-|---
-| Second body |x|m
-| 2 line |x|n
-|===
-| Footer row
-```
-
+## ...and you're done!
+Fire up a browser and go to https://username.github.io
 
