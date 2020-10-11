@@ -17,7 +17,7 @@ ___
 ___
 ### import modules
 
-
+<!--more-->
 ```python
 import torch
 import torch.nn as nn

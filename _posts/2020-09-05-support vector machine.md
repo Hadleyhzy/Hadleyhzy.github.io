@@ -21,7 +21,7 @@ smo implementation:
 ___
 https://github.com/LasseRegin/SVM-w-SMO/blob/master/SVM.py
 
-
+<!--more-->
 
 ```python
 import pickle

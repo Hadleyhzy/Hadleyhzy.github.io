@@ -24,7 +24,7 @@ from matplotlib.colors import ListedColormap
 cmap = ListedColormap(['#FF0000', '#00FF00', '#0000FF'])
 from collections import Counter
 ```
-
+<!--more-->
 ### prepare data
 
 

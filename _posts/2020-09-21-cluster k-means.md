@@ -14,7 +14,7 @@ ___
 ### Clustering
 ___
 Clustering is an unsupervised machine learning method that is used when you do not have labels for your data. The goal of clustering algorithms is to segment similar data points into groups; to extract meaning from the data.
-
+<!--more-->
 ### Introduction to K-Means Algorithm
 ___
 K-means clustering algorithm computes the centroids and iterates until we it finds optimal centroid. It assumes that the number of clusters are already known. It is also called flat clustering algorithm. The number of clusters identified from data by algorithm is represented by ‘K’ in K-means.
