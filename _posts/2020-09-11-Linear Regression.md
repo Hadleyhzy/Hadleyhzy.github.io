@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Tree
-key: 20201011
+title: Linear Regression
+key: 20200903
 tags:
   - machine learning
   - pytorch

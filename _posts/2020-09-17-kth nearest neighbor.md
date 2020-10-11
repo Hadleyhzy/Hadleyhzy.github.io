@@ -4,8 +4,9 @@ title: kth-nearest neighbor
 key: 20200917
 tags:
   - machine learning
-  - unsupervised learning
+  - supervised learning
   - python
+  - pytorch
 ---
 
 ## Preparing the Dataset
