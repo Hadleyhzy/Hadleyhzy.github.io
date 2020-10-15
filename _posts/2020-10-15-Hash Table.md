@@ -53,5 +53,5 @@ mymap['d']=40;
 mymap['e']=50;
 
 auto il=mymap.lower_bound('b');  //il points to b
-auto iu=mymap.upper_bound('d');  //iu points to e(not d!)
+auto iu=mymap.upper_bound('d');  //iu points to e(not)
 ```
