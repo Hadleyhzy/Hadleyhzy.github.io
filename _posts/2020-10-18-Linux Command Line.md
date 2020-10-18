@@ -8,7 +8,7 @@ tags:
 ---
 
 
-## The Command Line
+## Basic Command Line
 
 ### The Shell, Bash
 Sheel is a program that takes commands from the keyboard and gives them to the operating system to perform.
@@ -143,9 +143,31 @@ hadley@hadley-MacBookPro:~$ pwd
 * /usr/bin - Another location for programs on the system.
 
 
+## Files
+Everything is a file
+A text file is a file, a directory file, your keyboard is a file, your monitor is a file. Under linux system, it igonres the extension and looks inside the file to determine what type of file it is. `file` command can be used to find certain type of file is.
 
+``` bash
+hadley@hadley-MacBookPro:~/Developments$ file Hadleyhzy.github.io/
+Hadleyhzy.github.io/: directory
+hadley@hadley-MacBookPro:~/Developments$ file Hadleyhzy.github.io/index.html 
+Hadleyhzy.github.io/index.html: UTF-8 Unicode text
+hadley@hadley-MacBookPro:~/Developments$ file data_structure_and_algorithm/array/leetcode_array/283_move_zeros.cpp 
+data_structure_and_algorithm/array/leetcode_array/283_move_zeros.cpp: C++ source, UTF-8 Unicode text
+```
 
-
+Deal with spaces in names  
+* Quotes  
+* Escape Characters  
+``` bash
+hadley@hadley-MacBookPro:~/Developments$ cd 'holiday photos'
+hadley@hadley-MacBookPro:~/Developments/holiday photos$ pwd
+/home/hadley/Developments/holiday photos
+hadley@hadley-MacBookPro:~/Developments/holiday photos$ cd ..
+hadley@hadley-MacBookPro:~/Developments$ cd holiday\ photos
+hadley@hadley-MacBookPro:~/Developments/holiday photos$ pwd
+/home/hadley/Developments/holiday photos
+```
 
 
 
