@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Array
+title: Dynamic Programming
 key: 20201015
 tags:
   - C++
