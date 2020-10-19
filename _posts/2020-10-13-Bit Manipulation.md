@@ -8,16 +8,35 @@ tags:
   - Bit Manipulation
 ---
 
-## 1.Heap Definition
-### Heap using STL
+## Power of Two
+1. Get the Rightmost 1-bit
+two's complement:
+`-x = ~x + 1;`
+
 ``` c++
-#include <queue>
-//Max heap using priority queue
-std::priority_queue<int> pq(nums.begin(),nums.end());
-//Min heap using priority queue
-std::priority_queue<int, std::vector<int>, std::greater<int>> pq(nums.begin(),nums.end());
+bool isPowerOfTwo(int n){
+	return (n&(-n))==n;
+}
 ```
+
+2. Turn off the rightmost 1-bit
+``` c++
+bool isPowerOfTwo(int n){
+	return n&(n-1)==0;
+}
+```
+
+* 231 Power of Two([Q](https://leetcode.com/problems/power-of-two/):[A]())
 <!--more-->
+
+## XOR Operator
+Imagine, you have a problem to indentify an array element (or elements), which appears exactly given number of times. Probably, the key is to build first an array bitmask using XOR operator. Examples: In-Place Swap, Single Number, Single Number II.
+
+* 136 Single Number([Q](https://leetcode.com/problems/single-number/):[A]())
+* 137 Single Number II([Q](https://leetcode.com/problems/single-number-ii/):[A]())
+* 260 Single Number III([Q](https://leetcode.com/problems/single-number-iii/):[A]())
+
+
 
 ## Count set bits
 
