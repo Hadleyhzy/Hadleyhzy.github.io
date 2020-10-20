@@ -24,6 +24,7 @@ hadley@hadley-MacBookPro:~$ echo $SHELL
 hadley@hadley-MacBookPro:~$ pwd
 /home/hadley
 ```
+<!--more-->
 
 ### ls
 To list the contents of your current working directory:  
@@ -168,6 +169,150 @@ hadley@hadley-MacBookPro:~/Developments$ cd holiday\ photos
 hadley@hadley-MacBookPro:~/Developments/holiday photos$ pwd
 /home/hadley/Developments/holiday photos
 ```
+
+Manual Pages to explain every command available on your system.
+``` bash
+hadley@hadley-MacBookPro:~$ man ls
+LS(1)                            User Commands                           LS(1)
+
+NAME
+       ls - list directory contents
+
+SYNOPSIS
+       ls [OPTION]... [FILE]...
+
+DESCRIPTION
+       List  information  about  the FILEs (the current directory by default).
+       Sort entries alphabetically if none of -cftuvSUX nor --sort  is  speci‐
+       fied.
+
+       Mandatory  arguments  to  long  options are mandatory for short options
+       too.
+
+       -a, --all
+              do not ignore entries starting with .
+
+       -A, --almost-all
+              do not list implied . and ..
+```
+
+## File Manipulation
+`mkdir` `rmdir` `touch` `cp` `mv` `rm`
+
+### Making a directory
+`-p` Making parent directories
+
+``` bash
+hadley@hadley-MacBookPro:~/Developments$ mkdir -p parentDirectory/test
+hadley@hadley-MacBookPro:~/Developments$ ls -l
+total 36
+drwxrwxr-x 20 hadley hadley  4096 Okt 18 12:48 data_structure_and_algorithm
+drwxrwxr-x 17 hadley hadley  4096 Okt 18 11:15 Hadleyhzy.github.io
+drwxrwxr-x  3 hadley hadley  4096 Okt 20 19:48 parentDirectory
+-rwxrwxr-x  1 hadley hadley 17680 Okt 19 14:34 test
+-rw-rw-r--  1 hadley hadley   206 Okt 19 14:33 test.cpp
+```
+
+`-v`  Print a message for each created directory
+
+``` bash
+hadley@hadley-MacBookPro:~/Developments$ mkdir -pv pDirectory/test
+mkdir: created directory 'pDirectory'
+mkdir: created directory 'pDirectory/test'
+```
+Removing a directory, directory must be empty before it maybe removed
+
+``` bash
+hadley@hadley-MacBookPro:~/Developments$ rmdir -pv pDirectory/test
+rmdir: removing directory, 'pDirectory/test'
+rmdir: removing directory, 'pDirectory'
+```
+
+Creating a Blank File
+
+``` bash
+hadley@hadley-MacBookPro:~/Developments/parentDirectory/test$ touch test.txt
+hadley@hadley-MacBookPro:~/Developments/parentDirectory/test$ ls
+test.txt
+```
+
+
+Copying a file
+
+```bash
+hadley@hadley-MacBookPro:~/Developments/parentDirectory/test$ cp test.txt test1.txt
+hadley@hadley-MacBookPro:~/Developments/parentDirectory/test$ ls
+test1.txt  test.txt
+```
+
+Copying a directory
+
+```bash
+hadley@hadley-MacBookPro:~/Developments/parentDirectory$ cp test test1
+cp: -r not specified; omitting directory 'test'
+hadley@hadley-MacBookPro:~/Developments/parentDirectory$ ls
+test
+hadley@hadley-MacBookPro:~/Developments/parentDirectory$ cp -r test test1
+hadley@hadley-MacBookPro:~/Developments/parentDirectory$ ls
+test  test1
+```
+
+Moving a file:
+
+```bash
+hadley@hadley-MacBookPro:~/Developments/parentDirectory$ mv test/test2.txt test1/
+hadley@hadley-MacBookPro:~/Developments/parentDirectory$ cd test1/
+hadley@hadley-MacBookPro:~/Developments/parentDirectory/test1$ ls
+test1.txt  test2.txt  test.txt
+```
+
+Moving a Directory
+
+```bash
+hadley@hadley-MacBookPro:~/Developments/parentDirectory$ mv test test1/
+hadley@hadley-MacBookPro:~/Developments/parentDirectory$ cd test1/
+hadley@hadley-MacBookPro:~/Developments/parentDirectory/test1$ ls
+test  test1.txt  test2.txt  test.txt
+```
+Renaming Files and Directories
+
+``` bash
+hadley@hadley-MacBookPro:~/Developments/parentDirectory/test1$ mv test test_x
+hadley@hadley-MacBookPro:~/Developments/parentDirectory/test1$ ls
+test1.txt  test2.txt  test.txt  test_x
+```
+
+Removing a file and non empty Directories
+
+``` bash
+hadley@hadley-MacBookPro:~/Developments/parentDirectory/test1$ rm test.txt 
+hadley@hadley-MacBookPro:~/Developments/parentDirectory/test1$ ls
+test1.txt  test2.txt  test_x
+hadley@hadley-MacBookPro:~/Developments/parentDirectory/test1$ rm -r test_x
+hadley@hadley-MacBookPro:~/Developments/parentDirectory/test1$ ls
+test1.txt  test2.txt
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
