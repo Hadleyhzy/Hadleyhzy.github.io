@@ -14,6 +14,9 @@ tags:
 #### 2D array
 * 221 Maximal Square([Q](https://leetcode.com/problems/maximal-square/):[A]())(DFS->DP)
 
+* 256 Paint House([Q](https://leetcode.com/problems/paint-house/):[A]())(backtracking->DP)
+
+
 <!--more-->
 
 
