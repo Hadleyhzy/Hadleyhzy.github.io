@@ -5,13 +5,14 @@ key: 20201018
 tags:
   - Linux
   - Ubuntu
+  - Shell
 ---
 
 
 ## Basic Command Line
 
 ### The Shell, Bash
-Sheel is a program that takes commands from the keyboard and gives them to the operating system to perform.
+Shell is a program that takes commands from the keyboard and gives them to the operating system to perform.
 If you would like to know which shell you are using you may use a command called `echo` to display a system variable stating your current shell.
 
 ``` bash
@@ -292,6 +293,142 @@ hadley@hadley-MacBookPro:~/Developments/parentDirectory/test1$ rm -r test_x
 hadley@hadley-MacBookPro:~/Developments/parentDirectory/test1$ ls
 test1.txt  test2.txt
 ```
+
+### Vi Text Editor
+
+* `ZZ` - Save and exit
+* `:q!` - discard all changes since the last save and exit
+* `:w` - save file but don't exit
+* `:wq` - again, save and exit
+
+`cat` vs `less`: less for smaller files and less for larger files
+
+``` bash
+hadley@hadley-MacBookPro:~/Developments/parentDirectory$ cat file.txt 
+asfsaf
+asfasfd
+:x
+sfsafaf
+
+asfsafaf
+```
+* `nG` - move to the nth line
+* `G` - move to the last line
+* `w` - move to the beginning of the next word
+* `nw` - move forward n word
+* `b` - move to the beginning of the previous word
+* `nb` - move back n word
+* `{` - move backward one paragraph
+* `}` - move forward one paragraph
+
+
+* `x` - delete a single character
+* `nx` - delete n characters
+* `dd` - delete the current line
+* `dn` - d followed by a movement command
+
+### display/hide line numbers
+
+1. create ~/.exrc
+2. add `set number` or `set nonumber`
+
+
+### Wild Cards
+
+1. `*`
+
+``` bash
+hadley@hadley-MacBookPro:~/Developments/parentDirectory/test1$ ls
+test1.txt  test2.txt  test3.cpp  test4.py
+hadley@hadley-MacBookPro:~/Developments/parentDirectory/test1$ ls *.txt
+test1.txt  test2.txt
+```
+
+It is actually bash (The program that provides the command line interface) that does the translation for us. When we offer it this command it sees that we have used wildcards and so, before running the command ( in this case ls ) it replaces the pattern with every file or directory (ie path) that matches that pattern. We issue the command:
+
+* ls b*
+Then the system translates this into:
+
+* ls barry.txt blah.txt bob
+
+2. `?`
+
+``` bash
+hadley@hadley-MacBookPro:~/Developments/parentDirectory$ ls
+file.txt  test1  ttt
+hadley@hadley-MacBookPro:~/Developments/parentDirectory$ ls *.???
+file.txt
+hadley@hadley-MacBookPro:~/Developments/parentDirectory$ ls ?i*
+file.txt
+hadley@hadley-MacBookPro:~/Developments/parentDirectory$ ls */
+test1.txt  test2.txt  test3.cpp  test4.py
+```
+
+3. `[]`
+
+* looking for everyfile whose name either begins with x or y.
+
+``` bash
+hadley@hadley-MacBookPro:~/Developments/parentDirectory$ ls
+file.txt  test1  test.cpp  ttt  x  y
+hadley@hadley-MacBookPro:~/Developments/parentDirectory$ ls [xy]*
+x  y
+hadley@hadley-MacBookPro:~/Developments/parentDirectory$ ls [x-y]*
+x  x1  y
+```
+
+* find file whose name includes a digit in it 
+
+``` bash
+hadley@hadley-MacBookPro:~/Developments/parentDirectory$ ls *[0-9]*
+x1
+
+test1:
+test1.txt  test2.txt  test3.cpp  test4.py
+```
+
+* look for any character which is not one of the following
+
+```bash
+hadley@hadley-MacBookPro:~/Developments/parentDirectory$ ls
+file.txt  test1  test.cpp  ttt  x  x1  y
+hadley@hadley-MacBookPro:~/Developments/parentDirectory$ ls [^a-x]*
+y
+```
+* find file type in a directory
+
+``` bash
+hadley@hadley-MacBookPro:~/Developments/parentDirectory$ file *
+file.txt: ASCII text
+test1:    directory
+test.cpp: empty
+ttt:      empty
+x:        empty
+x1:       empty
+y:        empty
+```
+
+```bash
+hadley@hadley-MacBookPro:~/Developments/parentDirectory$ ls -lh /home/*/.bash_history
+-rw------- 1 hadley hadley 9,3K Okt 20 21:14 /home/hadley/.bash_history
+```
+
+Note that .bash_history is a file in a typical users home directory that keeps a history of commands the user has entered on the command line.
+``` bash
+less ~/.bash_history
+```
+{:.info}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
