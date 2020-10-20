@@ -10,6 +10,9 @@ tags:
 
 ## String Definition
 
+### Standard Backtracking
+* 294 Flip Game II([Q](https://leetcode.com/problems/flip-game-ii/):[A]())
+
 ## Permutations
 ### Permutations for dictinct data variables
 ```c++
