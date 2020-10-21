@@ -155,6 +155,35 @@ Oliver rockmellons 2
 Betty limes 14
 ```
 
+-n, --lines=[+]NUM
+              output the last NUM lines, instead of the last 10; or use -n +NUM to  output  starting  with
+              line NUM
+
+``` bash
+hadley@hadley-MacBookPro:~/Developments/parentDirectory$ cat -n data.txt 
+     1  Fred apples 20
+     2  Susy oranges 5
+     3  Mark watermellons 12
+     4  Robert pears 4
+     5  Terry oranges 9
+     6  Lisa peaches 7
+     7  Susy oranges 12
+     8  Mark grapes 39
+     9  Anne mangoes 7
+    10  Greg pineapples 3
+    11  Oliver rockmellons 2
+    12  Betty limes 14
+    13  test.\test[ss]
+    14  aaabbbbccdddddeee
+hadley@hadley-MacBookPro:~/Developments/parentDirectory$ tail -n +10 data.txt 
+Greg pineapples 3
+Oliver rockmellons 2
+Betty limes 14
+test.\test[ss]
+aaabbbbccdddddeee
+```
+
+
 ### Sort
 
 ``` bash
