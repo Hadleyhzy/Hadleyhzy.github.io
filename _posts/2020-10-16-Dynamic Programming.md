@@ -11,6 +11,25 @@ tags:
 
 ## Topic
 ### DFS/Backtracking Intuitive approach to dynamic programming
+
+### Subarray
+* 309 Best Time to buy and sell stock with cooldown(DP, multi-states)([Q](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/):[A]())
+
+``` c++
+//backtracking demo could be transformed into multiple dp arrays
+void backtracking(){
+	for(auto &x:{option1, option2,...}){
+
+	}
+	return;
+}
+
+void solution(){
+	int dp1[n];
+	int dp2[n];
+	...
+}
+```
 #### 2D array
 * 221 Maximal Square([Q](https://leetcode.com/problems/maximal-square/):[A]())(DFS->DP)
 

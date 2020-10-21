@@ -203,6 +203,11 @@ hadley@hadley-MacBookPro:~/Developments/parentDirectory$ wc -lw data.txt
 
 ```
 
+show number of files in current directory:
+```bash
+hadley@hadley-MacBookPro:~/Developments/parentDirectory$ ls -l | wc -l
+9
+```
 
 ### cut
 
@@ -303,22 +308,6 @@ Fred apples 20
 
 ### diff
 https://www.geeksforgeeks.org/diff-command-linux-examples/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
