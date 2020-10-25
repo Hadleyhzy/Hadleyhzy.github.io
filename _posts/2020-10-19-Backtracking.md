@@ -12,6 +12,7 @@ tags:
 
 ### Standard Backtracking
 * 294 Flip Game II([Q](https://leetcode.com/problems/flip-game-ii/):[A]())
+* 320 Generalized Abbreviation([Q](https://leetcode.com/problems/generalized-abbreviation/):[A]())
 
 ## Permutations
 ### Permutations for dictinct data variables
