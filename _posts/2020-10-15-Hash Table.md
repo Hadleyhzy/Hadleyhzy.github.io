@@ -1,6 +1,6 @@
 ---
 layout: post
-title: String
+title: Hash Table
 key: 20201015
 tags:
   - C++
