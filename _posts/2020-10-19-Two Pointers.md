@@ -58,6 +58,7 @@ int twoSum(int array[], int N, int target){
 find numbers of three elements such that their sum is less than target.
 * 259 3Sum Smaller([Q](https://leetcode.com/problems/3sum-smaller/):[A]())
 * 16 3Sum Closest([Q](https://leetcode.com/problems/3sum-closest/):[A]())
+* 18 4Sum([Q](https://leetcode.com/problems/4sum/):[A]())
 
 ``` c++
 int threeSumSmaller(vector<int>& nums, int target) {

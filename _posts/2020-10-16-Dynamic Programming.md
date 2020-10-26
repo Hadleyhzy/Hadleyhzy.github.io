@@ -31,6 +31,10 @@ void solution(){
 	...
 }
 ```
+
+* 55 Jump Game([Q](https://leetcode.com/problems/jump-game/):[A]())
+
+
 #### 2D array
 * 221 Maximal Square([Q](https://leetcode.com/problems/maximal-square/):[A]())(DFS->DP)
 
