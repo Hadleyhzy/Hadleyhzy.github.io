@@ -28,6 +28,11 @@ bool isPowerOfTwo(int n){
 
 * 231 Power of Two([Q](https://leetcode.com/problems/power-of-two/):[A]())
 <!--more-->
+* 338 Counting Bits([Q](https://leetcode.com/problems/counting-bits/):[A]())
+(Turnoff rightmost bits)
+How to understand using n&(n-1) to turn off rightmost bits?
+there must be only one bit that turns from 0 to 1 when adding one to any numbers, all the rest of bits that are right side of this bit will become zero, thus n&(n-1) will set all these right side of bits to be zero include this rightmost 1 bit since this rightmost bit in (n-1) must be zero.
+{:.info}
 
 ## XOR Operator
 Imagine, you have a problem to indentify an array element (or elements), which appears exactly given number of times. Probably, the key is to build first an array bitmask using XOR operator. Examples: In-Place Swap, Single Number, Single Number II.
