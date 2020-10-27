@@ -55,3 +55,11 @@ mymap['e']=50;
 auto il=mymap.lower_bound('b');  //il points to b
 auto iu=mymap.upper_bound('d');  //iu points to e(not)
 ```
+
+## Sum
+* 325 Maximum Size Subarray Sum Equals K([Q](https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/):[A]())(Hash Table)
+
+
+## Sort
+* 274 H-Index([Q](https://leetcode.com/problems/h-index/):[A]())(hash table)
+* 275 H-Index II([Q](https://leetcode.com/problems/h-index-ii/):[A]())(binary search)
