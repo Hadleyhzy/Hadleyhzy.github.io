@@ -26,7 +26,7 @@ drwxrwxr-x 2 hadley hadley 4096 Okt 21 21:09 test1
 -rw-rw-r-- 1 hadley hadley    0 Okt 20 21:43 x1
 -rw-rw-r-- 1 hadley hadley    0 Okt 20 21:42 y
 ```
-
+<!--more-->
 If we redirect to a file which does not exist, it will be created automatically for us. If we save into a file which already exists, however, then it's contents will be cleared, then the new output saved to it.
 {:.info}
 

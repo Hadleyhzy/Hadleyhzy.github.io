@@ -24,7 +24,7 @@ hadley@hadley-MacBookPro:~$ cat /etc/shells
 /bin/dash
 /usr/bin/dash
 ```
-
+<!--more-->
 
 
 

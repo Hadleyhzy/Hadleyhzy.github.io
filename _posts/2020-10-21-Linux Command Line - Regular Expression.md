@@ -19,6 +19,8 @@ Oliver rockmellons 2
 
 `-v` to tells egrep to instread print every line which does not match the pattern
 
+<!--more-->
+
 ``` bash 
 hadley@hadley-MacBookPro:~/Developments/parentDirectory$ egrep -v 'mellon' data.txt 
 Fred apples 20

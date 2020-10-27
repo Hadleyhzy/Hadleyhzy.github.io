@@ -28,7 +28,7 @@ drwxrwxr-x 2 hadley hadley 4096 Okt 20 21:33 test1
 * The following 3 characters represent the permissions for the owner. A letter represents the presence of a permission and a dash ( - ) represents the absence of a permission. In this example the owner has all permissions (read, write and execute).
 * The following 3 characters represent the permissions for the group. In this example the group has the ability to read but not write or execute. Note that the order of permissions is always read, then write then execute.
 * Finally the last 3 characters represent the permissions for others (or everyone else). In this example they have the execute permission and nothing else.
-
+<!--more-->
 ### change permissions
 
 Grant execute permission to the user:
