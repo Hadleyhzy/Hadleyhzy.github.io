@@ -27,6 +27,10 @@ Node *node=new Node();
 ### inplace
 * 328 Odd Even Linked List([Q](https://leetcode.com/problems/odd-even-linked-list/):[A]())(two node pointers through iteration)
 
+## Build Linked List
+### Linked List from right to left
+* 369 Plus One Linked List([Q](https://leetcode.com/problems/plus-one-linked-list/):[A]())
+
 
 ## List
 Lists are sequence containers that allow non-continguous memory allocation. As compared to vector, list has slow traversal, but once a position has been found, insertion and deletion are quick. 
