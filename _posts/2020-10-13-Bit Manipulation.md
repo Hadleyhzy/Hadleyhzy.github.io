@@ -34,6 +34,9 @@ How to understand using n&(n-1) to turn off rightmost bits?
 there must be only one bit that turns from 0 to 1 when adding one to any numbers, all the rest of bits that are right side of this bit will become zero, thus n&(n-1) will set all these right side of bits to be zero include this rightmost 1 bit since this rightmost bit in (n-1) must be zero.
 {:.info}
 
+## Sum using bitwise operation
+* 371 Sum of two integers([Q](https://leetcode.com/problems/sum-of-two-integers/):[A]())
+
 ## XOR Operator
 Imagine, you have a problem to indentify an array element (or elements), which appears exactly given number of times. Probably, the key is to build first an array bitmask using XOR operator. Examples: In-Place Swap, Single Number, Single Number II.
 
@@ -50,6 +53,9 @@ Imagine, you have a problem to indentify an array element (or elements), which a
 * Bitwise And of Numbers Range([Q](https://leetcode.com/problems/bitwise-and-of-numbers-range/):[A]())
 1.brute force 2.bit shift operation 3.Brian Kernighan's Algorithm
 {:.info}
+
+## Compare Strings
+* 318 Maximum Product of Word Lengths([Q](https://leetcode.com/problems/maximum-product-of-word-lengths/):[A]())
 
 
 
