@@ -63,3 +63,6 @@ auto iu=mymap.upper_bound('d');  //iu points to e(not)
 ## Sort
 * 274 H-Index([Q](https://leetcode.com/problems/h-index/):[A]())(hash table)
 * 275 H-Index II([Q](https://leetcode.com/problems/h-index-ii/):[A]())(binary search)
+
+## Count
+* 348 Design Tic-Tac-Toe([Q](https://leetcode.com/problems/design-tic-tac-toe/):[A]())

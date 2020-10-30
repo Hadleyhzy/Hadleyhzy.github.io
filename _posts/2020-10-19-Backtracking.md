@@ -1,11 +1,12 @@
 ---
 layout: post
-title: Backtracking
+title: Backtracking and DFS
 key: 20201019
 tags:
   - C++
   - data structure and algorithm
   - Backtracking
+  - DFS
 ---
 
 ## String Definition
@@ -30,6 +31,8 @@ void permutation(vector<int> &num, int l, vector<vector<int> > &res) {
     }
 }
 ```
+<!--more-->
+
 
 ### Permutations for duplicated data variables
 ```c++
@@ -50,4 +53,11 @@ void permu(vector<int> nums, int l, vector<vector<int>>&res){
 
 ## Combinations
 
+
+# DFS
+
+* 364 Nested List Weight Sum II([Q](https://leetcode.com/problems/nested-list-weight-sum-ii/):[A]())
+
+Note that when reversely assigning or returning depth of nested list, using hash table as global variable to store value then loop through.  
+{:.info}
 
