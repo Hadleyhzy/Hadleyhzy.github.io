@@ -61,3 +61,7 @@ void permu(vector<int> nums, int l, vector<vector<int>>&res){
 Note that when reversely assigning or returning depth of nested list, using hash table as global variable to store value then loop through.  
 {:.info}
 
+* 341 Flatten Nested List Iterator([Q](https://leetcode.com/problems/flatten-nested-list-iterator/):[A]())
+
+
+

@@ -40,6 +40,15 @@ mymap.erase('c');//erasing by key
 it=mymap.find('e');
 mymap.erase(it,mymap.end());//erasing by range
 
+//loop through map
+for(auto &kv:map){
+	std::cout<<kv.first<<" has value "<<kv.second<<std::endl;
+}
+
+for(auto& [key,value]:map)
+
+for(auto it=map.begin();it!=map.end();it++)
+
 ```
 
 ### std::map::lower_bound/std::map::upper_bound
@@ -66,3 +75,6 @@ auto iu=mymap.upper_bound('d');  //iu points to e(not)
 
 ## Count
 * 348 Design Tic-Tac-Toe([Q](https://leetcode.com/problems/design-tic-tac-toe/):[A]())
+
+## Design to dynamically output a range
+* 362 Design Hit Counter([Q](https://leetcode.com/problems/design-hit-counter/):[A]())
