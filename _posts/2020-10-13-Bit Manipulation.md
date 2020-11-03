@@ -8,6 +8,30 @@ tags:
   - Bit Manipulation
 ---
 
+## Bit Arithmetic
+* Binary Addition
+```c++
+string addBinary(string a, string b){
+	int m=a.size(),n=b.size();
+	int i=m-1,j=n-1;
+	string res="";
+	int temp=0;
+	while(i>=0||j>=0||temp==1){
+		temp+=((i>=0)?a[i]-'0':0);
+		temp+=((j>=0)?b[j]-'0':0);
+
+		res=char(temp%2+'0')+res;
+		temp/=2;
+		i--;j--;
+	}
+	return res;
+}
+```
+
+* 67 Add Binary([Q](https://leetcode.com/problems/add-binary/):[A]())
+
+## Binary, Decimal, Hexadecimal Conversion
+
 ## Power of Two
 1. Get the Rightmost 1-bit
 two's complement:
