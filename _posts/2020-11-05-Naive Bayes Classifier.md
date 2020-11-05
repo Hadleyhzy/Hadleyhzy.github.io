@@ -31,7 +31,7 @@ where y is class variable and <img src="https://latex.codecogs.com/svg.latex?  \
 
 * p(x) is prior probability of x and p(y) is prior probability of y.
 
-* P(x|y) is a posteriori probability of y.
+* <img src="https://latex.codecogs.com/svg.latex? p( \overrightarrow{x} |y)" /> is a posteriori probability of y.
 
 Since given assumption that all features are independent, then
 
@@ -52,7 +52,7 @@ To maximize the probability of event y given the probability of event x is the s
 
 ## Example
 
-|  OUTLOOK  |  Temperature | Humidity | Windy | Play Golf |
+|  Outlook  |  Temperature | Humidity | Windy | Play Golf |
 | ----------|:------------:| --------:|------:|----------:|
 | Rainy     |      Hot     |   High   | False |    No     |
 | Rainy     |      Hot     |   High   | True  |    No     |
@@ -69,10 +69,21 @@ To maximize the probability of event y given the probability of event x is the s
 | Overcast  |      Hot     |   Normal | False |    Yes    |
 | Sunny     |      Mild    |   High   | True  |    No     |
 
+Task: estimate whether or not to play golf when it's {Rainy, Hot, High, False}
 
+Solution:
 
+<img src="https://latex.codecogs.com/svg.latex? p(y|outlook,temperature,humidity,windy)= \frac{p(outlook,temperature,humidity,windy|y)p(y)}{p(outlook,temperature,humidity,windy}= p(outlook,temperature,humidity,windy|y)p(y)=p(outlook|y)p(temperature|y)p(humidity|y)p(windy|y)p(y)" title="x_{ij}" />
 
+Given specific observations mentioned in the task:
 
+<img src="https://latex.codecogs.com/svg.latex? p(y=yes|outlook,temperature,humidity,windy)=p(outlook=rainy|y=yes)p(temperature=Hot|y=yes)p(humidity=High|y=yes)p(windy=False|y=yes)p(y=yes)= \frac{2}{9} \frac{2}{9} \frac{6}{9} \frac{6}{9} \frac{9}{14}" title="x_{ij}" />
+
+Now after normalization or logarithmic calculation, we compare both probabilities for playing gold and not playing gold, and the prediction would be the one with higher probability:
+
+<img src="https://latex.codecogs.com/svg.latex? p(yes|today)= \frac{0.0141}{0.0141+0.0068} =0.67" title="x_{ij}" />
+
+<img src="https://latex.codecogs.com/svg.latex? p(no|today)= \frac{0.0068}{0.0141+0.0068} =0.33" title="x_{ij}" />
 
 
 ## Implementation from scratch
