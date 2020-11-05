@@ -9,26 +9,42 @@ tags:
   - machine learning
 ---
 
-# Naive Bayes Classifiers
-
 ## Definition
 
 Naive Bayes classifiers are based on naive bayes classifier algorithms. Let's say we have m input values <img src="https://latex.codecogs.com/svg.latex?  \overrightarrow{x} =< x_{1},x_{2},x_{3},...,x_{m} >" title="x_{ij}" />
 
-1. Assume all these input variables/features are conditionally independent given Y. 
+1. Assume all these input variables/features are conditionally independent given Y and equally contributed to the outcome.  
 In reality it is not quite `possible` that all features are conditionally independent
 {:.info}
 
-2. Simply chose the class label that is the most likely given the data, predict Y using <img src="https://latex.codecogs.com/svg.latex?   \widehat{Y} =  \argmax_{y}  P( \overrightarrow{x},Y)" title="x_{ij}" />
+2. Simply chose the class label that is the most likely given the data, predict Y using <img src="https://latex.codecogs.com/svg.latex?   \widehat{Y} =   argmax_{y=\{0,1\}}   P( \overrightarrow{x},Y)  " title="x_{ij}" />
+
+
+## Bayes' Theorem 
+Bayes' Theorem gives the probability of an event occurring given the probability of another event that has already occurred.
+
+<img src="https://latex.codecogs.com/svg.latex? p(y| \overrightarrow{x})= \frac{p( \overrightarrow{x}|y) p(y)}{p( \overrightarrow{x} )}" title="x_{ij}" />
+
+where y is class variable and <img src="https://latex.codecogs.com/svg.latex?  \overrightarrow{x} " title="x_{ij}" /> is a feature vector where <img src="https://latex.codecogs.com/svg.latex?  \overrightarrow{x} =< x_{1},x_{2},x_{3},...,x_{n} >" title="x_{ij}" />
+
+* basically, we are trying to find probability of event y, given event x, event x is also termed as evidence.
+
+* p(x) is prior probability of x and p(y) is prior probability of y.
+
+* P(x|y) is a posteriori probability of y.
+
+Since given assumption that all features are independent, then
 
 
 
+## Compare between MLE and MAP
 
-## String and Math Operation
-if when looping through string/array, current variable has direct influence to previous variable and both variable could be removed or modified after operation, then considering using stack as data structure.
 
-* 227 Basic Calculator II([Q](https://leetcode.com/problems/basic-calculator-ii/):[A]())(stack)
+## Example
 
-keep in mind data structure:
-stack::top() -> sign -> tmp -> s[i]  
-{:.info}
+
+
+## Implementation from scratch
+
+
+## Implementation using pytorch
