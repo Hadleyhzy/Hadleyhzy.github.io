@@ -96,7 +96,7 @@ Now after normalization or logarithmic calculation, we compare both probabilitie
 <img src="https://latex.codecogs.com/svg.latex? p(no|today)= \frac{0.0068}{0.0141+0.0068} =0.33" title="x_{ij}" />
 
 
-## Implementation continuous model from scratch
+## Implementation continuous data model from scratch
 
 ### Import module
 
@@ -135,7 +135,7 @@ print(y[0:10])
     [0 0 1 1 1 0 0 0 1 0]
 
 
-### create discrete naive bayes model
+### create naive bayes model
 
 
 ```python
@@ -232,7 +232,7 @@ print("Naive Bayes classification accuracy", accuracy)
     Naive Bayes classification accuracy 0.965
 
 
-## Implementation using pytorch
+## Implementation using sklearn
 
 ### import modules
 
