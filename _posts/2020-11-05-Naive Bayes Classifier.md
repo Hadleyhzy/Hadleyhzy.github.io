@@ -4,7 +4,7 @@ title: Naive Bayes Classifer
 key: 20201105
 tags:
   - Python
-  - Pytorch
+  - Sklearn
   - Naive Bayes
   - machine learning
 ---
