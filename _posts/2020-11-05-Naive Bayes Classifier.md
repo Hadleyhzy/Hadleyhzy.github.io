@@ -331,5 +331,5 @@ sns.heatmap(cm_matrix, annot=True, fmt='d', cmap='YlGnBu')
 
 
     
-![svg](naive_bayes_sklearn_files/naive_bayes_sklearn_12_1.svg)
+![svg](https://raw.githubusercontent.com/hadleyhzy34/machine_learning/master/naive_bayes/naive_bayes_sklearn_files/naive_bayes_sklearn_12_1.png)
     
