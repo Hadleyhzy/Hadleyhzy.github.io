@@ -103,7 +103,7 @@ data_set
 
 ## question class
 
-![questions]()
+![questions](https://raw.githubusercontent.com/hadleyhzy34/machine_learning/master/decision_tree/source/possible_questions.png)
 
 ```python
 class Question:
@@ -137,7 +137,7 @@ q.match(example)  #this will be false since forth example diameter is less than 
 
 ## partition function
 
-![partition]()
+![partition](https://raw.githubusercontent.com/hadleyhzy34/machine_learning/master/decision_tree/source/partition.png)
 
 ```python
 def partition(rows, question):
@@ -246,7 +246,7 @@ gini(lots_of_mixing)
 
 ## Information Gains
 
-![info_gain]()
+![info_gain](https://raw.githubusercontent.com/hadleyhzy34/machine_learning/master/decision_tree/source/info_gain.png)
 
 ```python
 def info_gain(left, right, current_gini_impurity):
