@@ -20,6 +20,7 @@ In reality it is not quite `possible` that all features are conditionally indepe
 2. Simply chose the class label that is the most likely given the data, predict Y using <img src="https://latex.codecogs.com/svg.latex?   \widehat{Y} =   argmax_{y=\{0,1\}}   P( \overrightarrow{x},Y)" title="x_{ij}" />
 
 
+<!--more-->
 ## Bayes' Theorem 
 Bayes' Theorem gives the probability of an event occurring given the probability of another event that has already occurred.
 

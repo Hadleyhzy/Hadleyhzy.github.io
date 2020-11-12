@@ -32,6 +32,8 @@ IndexError: index 10 is out of bounds for axis 0 with size 10
 8
 ```
 
+
+<!--more-->
 ## array Dimension
 
 ### list dimension

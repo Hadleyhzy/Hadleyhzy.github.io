@@ -29,6 +29,8 @@ Family of Decision Tree Learning Algorithms:
 * C5.0
 * CART
 
+
+<!--more-->
 ### CART
 `CART` stands for classification and regression trees
 
