@@ -36,7 +36,7 @@ Family of Decision Tree Learning Algorithms:
 
 `CART` overview:
 
-![cart_overview](https://raw.githubusercontent.com/hadleyhzy34/machine_learning/master/decision_tree/overview_cart.png)
+![cart_overview](https://raw.githubusercontent.com/hadleyhzy34/machine_learning/master/decision_tree/source/overview_cart.png)
 
 The trick to build an effective tree is to understand which questions to ask and when. And to do that, we need to quantify how much a question helps to unmix the labels. And we can quantify the amount of uncertainty at a single node using a metrix called `Gini impurity`. And we can quantify how much a question reduces that uncertainty using a concept called `information gain`.
 
