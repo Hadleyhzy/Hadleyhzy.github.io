@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Random Forest
-key: 20201103
+title: Decision Tree
+key: 20201112
 tags:
   - Python
   - machine learning
@@ -36,7 +36,7 @@ Family of Decision Tree Learning Algorithms:
 
 `CART` overview:
 
-![cart_overview]()
+![cart_overview](https://raw.githubusercontent.com/hadleyhzy34/machine_learning/master/decision_tree/overview_cart.png)
 
 The trick to build an effective tree is to understand which questions to ask and when. And to do that, we need to quantify how much a question helps to unmix the labels. And we can quantify the amount of uncertainty at a single node using a metrix called `Gini impurity`. And we can quantify how much a question reduces that uncertainty using a concept called `information gain`.
 
@@ -68,31 +68,7 @@ print(training_data)
     [['Green', 3, 'Apple'], ['Yellow', 3, 'Apple'], ['Red', 1, 'Grape'], ['Red', 1, 'Grape'], ['Yellow', 3, 'Lemon']]
 
 
-transform categorical data into integers:
-
-
-```python
-label_encoder = LabelEncoder()
-x_color= [ x[0] for x in training_data]
-x_label= [ x[2] for x in training_data]
-y_color = label_encoder.fit_transform(x_color)
-y_label = label_encoder.fit_transform(x_label)
-print(y_color)
-data_set=[ [col1,col2[1],col3] for (col1,col2,col3) in zip(y_color,training_data,y_label)]
-# data_set = np.array(test)
-data_set
-```
-
-    [0 2 1 1 2]
-
-
-
-
-
-    [[0, 3, 0], [2, 3, 0], [1, 1, 1], [1, 1, 1], [2, 3, 2]]
-
-
-
+### transform categorical data into integers:
 
 ```python
 def encode_data(training_data):
@@ -127,6 +103,7 @@ data_set
 
 ## question class
 
+![questions]()
 
 ```python
 class Question:
@@ -160,6 +137,7 @@ q.match(example)  #this will be false since forth example diameter is less than 
 
 ## partition function
 
+![partition]()
 
 ```python
 def partition(rows, question):
@@ -189,8 +167,19 @@ true_rows, false_rows
 
 ## Gini Impurity
 
-Chance of being incorrect if you randomly assign a label to an example in the same set
+Chance of being incorrect if you randomly assign a label to an example in the same set. It is a measurement of the likelihood of an incorrect classification of a new instance of a random variable. Gini Impurity means all data contains only one class.
 
+How to calculate gini impurity:
+
+<img src="https://latex.codecogs.com/svg.latex?  G(K) = 1-  \sum_i^m  p\_instance(i)  p(i)  
+= 1- \sum_i^m  \frac{1}{m} p(i)  
+= 1- \sum_i^n  \frac{k}{m} p(i) " title="x_{ij}" />
+
+where p_instance(i) is the probablity to randomly select an instance, m is number of example/instances, n is number of class/labels, k is frequency of current instance, p(i) is the probability of an item with label i being chosen, which is also the fraction of items labeled with class i in the set.
+
+reference regarding to `Gini Impurity`:
+1. https://victorzhou.com/blog/gini-impurity/
+2. https://en.wikipedia.org/wiki/Decision_tree_learning#Gini_impurity
 
 ```python
 def gini(rows):
@@ -257,6 +246,7 @@ gini(lots_of_mixing)
 
 ## Information Gains
 
+![info_gain]()
 
 ```python
 def info_gain(left, right, current_gini_impurity):
