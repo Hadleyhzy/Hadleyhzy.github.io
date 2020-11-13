@@ -27,7 +27,7 @@ Let’s say we want to find the mean height of all the students in a school (whi
 
 One approach is to measure the height of all the students and then compute the mean height. I’ve illustrated this process below:
 
-![bootstrap_demp](https://raw.githubusercontent.com/hadleyhzy34/machine_learning/master/random_forest/bootstrap_demo.png)
+![bootstrap_demp](https://raw.githubusercontent.com/hadleyhzy34/machine_learning/master/random_forest/source/bootstrap_demo.png)
 
 However, this would be a tedious task. Just think about it, we would have to individually measure the heights of 1,000 students and then compute the mean height. It will take days! We need a smarter approach here.
 
