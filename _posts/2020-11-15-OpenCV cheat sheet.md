@@ -1,11 +1,10 @@
 ---
 layout: post
-title: Numpy Cheat Sheet
+title: OpenCV cheat sheet
 key: 20201113
 tags:
   - Python
   - OpenCV
-  - 
 ---
 
 ## image I/O
