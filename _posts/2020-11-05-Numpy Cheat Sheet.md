@@ -40,11 +40,6 @@ Updated animals list:  ['cat', 'dog', 'rabbit', ['tiger', 'fox']]
 ```
 
 
-## Creating Arrays
-
-list = []
-array = np.array(list)
-
 ## numpy.array and list conversion
 
 ```python
@@ -128,6 +123,11 @@ array([[[0, 0, 0],
 
        [[0, 1, 2],
         [0, 1, 2]]])
+```
+
+* array zeros
+```python
+
 ```
 
 ## Array basic operation
