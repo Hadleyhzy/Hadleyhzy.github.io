@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Numpy Cheat Sheet
+title: Python Numpy Cheat Sheet
 key: 20201105
 tags:
   - Python
@@ -14,7 +14,7 @@ tags:
 
 #### array initialization using list
 
-``` bash
+``` python
 >>> arr = np.array([1,2,3,4,5])
 >>> arr
 array([1, 2, 3, 4, 5])
@@ -26,7 +26,7 @@ array([1, 2, 3, 4, 5])
 
 #### array initialization using tuple
 
-```bash
+```python
 >>> arr = np.array((1,2,3,4,5))
 >>> print(arr)
 [1 2 3 4 5]
@@ -36,7 +36,7 @@ array([1, 2, 3, 4, 5])
 
 #### multiple dimension array initialization
 
-```bash
+```python
 >>> arr = np.array([[1,2,3],[4,5,6]])        #2D array
 >>> print(arr)
 [[1 2 3]
@@ -57,7 +57,7 @@ array([1, 2, 3, 4, 5])
 
 #### array initialization using numpy.arange()
 
-```bash
+```python
 >>> arr = np.arange(10)
 >>> print(arr)
 [0 1 2 3 4 5 6 7 8 9]
@@ -70,14 +70,14 @@ array([2. , 2.3, 2.6, 2.9])
 
 #### array initialization using numpy.linspace()
 
-```bash
+```python
 >>> arr = np.linspace(1,10,3)       #specified number of elements
 >>> print(arr)
 [ 1.   5.5 10. ]
 ```
 #### array initialization with specified value/pattern
 
-```bash
+```python
 >>> arr = np.zeros((3,3))
 >>> print(arr)
 [[0. 0. 0.]
@@ -129,7 +129,7 @@ array([2. , 2.3, 2.6, 2.9])
 ### array attribute
 
 #### shape
-```bash
+```python
 >>> arr = np.array([[1,2,3],[4,5,6]])
 >>> print(arr.shape)
 (2, 3)
@@ -142,7 +142,7 @@ array([2. , 2.3, 2.6, 2.9])
 ```
 
 #### reshape
-```bash
+```python
 >>> x = np.array([[1,2,3],[4,5,6]])
 >>> print(x.shape)
 (2, 3)
@@ -166,7 +166,7 @@ array([2. , 2.3, 2.6, 2.9])
 
 #### dtype
 
-```bash
+```python
 >>> x = np.array([1,2,3])
 >>> print(x.dtype)
 int64
@@ -184,7 +184,7 @@ float64
 
 #### single index
 
-```bash
+```python
 >>> x = np.arange(10)
 >>> x[0]
 0
@@ -202,7 +202,7 @@ IndexError: index 10 is out of bounds for axis 0 with size 10
 
 a slice of array is a view into the same data, so modifying it will modify the original array.
 
-```bash
+```python
 >>> arr = np.array([[1,2,3,4],[5,6,7,8],[9,10,11,12]])
 >>> x = arr[0:2,1:3]
 >>> print(x)
@@ -216,7 +216,7 @@ a slice of array is a view into the same data, so modifying it will modify the o
 ``` 
 #### mix integer indexing with slice
 
-```bash
+```python
 >>> print(arr)
 [[  1   2 100   4]
  [  5   6   7   8]
@@ -239,7 +239,7 @@ a slice of array is a view into the same data, so modifying it will modify the o
 
 #### integer array indexing
 
-```bash
+```python
 >>> arr
 array([[  1,   2, 100,   4],
        [  5,   6,   7,   8],
@@ -262,7 +262,7 @@ array([[  1,   2, 100,   4],
 
 #### boolean array indexing
 
-```bash
+```python
 >>> print(arr)
 [[  1   2 200   4]
  [  5 106   7   8]
@@ -282,7 +282,7 @@ array([[  1,   2, 100,   4],
 
 this function returns the dot product of two arrays. For 2-D vectors, it is equivalent to matrix multiplication. For 1-D vectors, it is the inner product of the vectors.
 
-```bash
+```python
 >>> v = np.array([9,10])
 >>> w = np.array([11,12])
 >>> print(v.dot(w))
@@ -304,7 +304,7 @@ this function returns the dot product of two arrays. For 2-D vectors, it is equi
 
 #### sum
 
-```bash
+```python
 >>> x
 array([[1, 2],
        [3, 4]])
@@ -322,7 +322,7 @@ array([[1, 2],
 
 #### transpose
 
-```bash
+```python
 >>> x = np.array([1,2,3])
 >>> print(x.shape)
 (3,)
@@ -354,7 +354,7 @@ Note that 1D array after transpose is still 1D array.
 
 Broadcasting is a powerful mechanism that allows numpy to work with arrays of different shapes when performing arithmetic operations. Frequently we have a smaller array and a larger array, and we want to use the smaller array multiple times to perform some operation on the larger array.
 
-```bash
+```python
 >>> x = np.array([[1,2,3], [4,5,6], [7,8,9], [10, 11, 12]])
 >>> v = np.array([-1,-2,-3])
 >>> y=x+v
@@ -381,7 +381,7 @@ temp * w => dimension(3,1) * dimension(2) => dimension(3,2) * dimension(2)
 v * w_reshape => dimension(3) * dimension(2,1) => dimension(3) * dimension(2,3) => np.array([1,2,3]) * np.array([[4,4,4],[5,5,5]])
 
 
-```bash
+```python
 >>> v = np.array([1,2,3])
 >>> w = np.array([4,5])
 >>> temp = np.reshape(v,(3,1))
@@ -407,7 +407,7 @@ transferred to below when computing `np.reshape(v,(3,1)) * w`:
  [3,3]]
 ```
 
-```bash
+```python
 >>> print(x)
 [[ 1  2  3]
  [ 4  5  6]
@@ -427,7 +427,7 @@ transferred to below when computing `np.reshape(v,(3,1)) * w`:
 
 #### array unique 
 
-```bash
+```python
 >>> arr = np.array([1,1,1,1,2,2,2,3,3,4])
 >>> val,counts = np.unique(arr,return_counts=True)
 >>> print(val,type(val))
@@ -443,7 +443,7 @@ transferred to below when computing `np.reshape(v,(3,1)) * w`:
 
 #### basic
 
-```bash
+```python
 >>> x = np.array([1,2,3])
 >>> y = np.array([4,5,6])
 >>> print(np.add(x,y))
