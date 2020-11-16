@@ -15,10 +15,10 @@ tags:
 
 ## class definition
 
-## class {.tabset}
 
 ### C++
 ```C++
+// class
 class SoftwareEngineer{
 public:
 
@@ -30,10 +30,19 @@ private:
 ### Python
 
 ```python
+# class
 class SoftwareEngineer:
 	# class attribute
+	alias = 'SE'
+
+	def __init__(self,name,age,level,salary):
+		#instance attribute
+		self.name = name
+		self.age = age
+		self.level = level
+		self.salary = salary
 
 
-#instance
+#instance/object
 student1 = SoftwareEngineer('max',20,'Junior',5000)
 ```
