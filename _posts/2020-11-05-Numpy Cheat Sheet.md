@@ -282,6 +282,17 @@ array([[  1,   2, 100,   4],
 
 this function returns the dot product of two arrays. For 2-D vectors, it is equivalent to matrix multiplication. For 1-D vectors, it is the inner product of the vectors.
 
+1. If both a and b are 1-D arrays, it is inner product of vectors (without complex conjugation).
+ 2. If both a and b are 2-D arrays, it is matrix multiplication, but using matmul or a @ b is preferred.
+ 3. If either a or b is 0-D (scalar), it is equivalent to multiply and using numpy.multiply(a, b) or a * b is preferred.
+ 4. If a is an N-D array and b is a 1-D array, it is a sum product over the last axis of a and b.
+
+ {:.info}
+
+ When a or b is 2D array while the other is 1D array, it still applies to maxtrix multiplication rules.
+ {:.warning}
+ 
+
 ```python
 >>> v = np.array([9,10])
 >>> w = np.array([11,12])
