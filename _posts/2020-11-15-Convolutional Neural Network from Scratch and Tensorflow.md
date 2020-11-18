@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Convolutional Neural Network from Scratch and Tensorflow
+title: Convolutional Neural Network from Scratch, Keras&Tensorflow
 key: 20201115
 tags:
   - Python
