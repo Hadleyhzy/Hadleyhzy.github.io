@@ -257,15 +257,73 @@ TypeError                                 Traceback (most recent call last)
 
 TypeError: entry_salary2() takes 1 positional argument but 2 were given
 ```
-### C++
 
-![uml_oop]()
+### C++  
 
-#### Constructor
+#### Default constructor
 
-##### Default constructor
+```c++
+class Points{
+public:
+	Points(int x=0, int y=0){
+		this->x=x;
+		this->y=y;
+	}
+	...
+private:
+	int x;
+	int y;
+}
+```
 
-##### constructor initializer
+```c++
+//defaut constructor
+Points point3 = Points();
+point3.print();
+```
+
+```
+0 0
+```
+
+#### constructor initializer list
+
+```c++
+class Points{
+public:
+	Points(int x=0, int y=0):x(x),y(y){}
+	...
+private:
+	int x;
+	int y;
+}
+```
+
+* When do we use initializer list
+
+1. for initialization of non-static const data members
+
+```c++
+class Points{
+public:
+	Points(int x,y):x(x),y(y){};
+private:
+	const int x;
+	const int y;
+}
+```
+
+
+
+2. for initialization of reference members
+3. for initialization of member objects which do not have default constructor
+4. for initialization of base class members
+5. when constructor's parameter name is same as data member
+6. for performance
+
+Reference: https://www.geeksforgeeks.org/when-do-we-use-initializer-list-in-c/
+
+
 
 #### get and set
 
