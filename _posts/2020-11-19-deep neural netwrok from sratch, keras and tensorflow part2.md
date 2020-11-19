@@ -464,7 +464,7 @@ plt.show()
 
 
     
-![svg](dnn_keras_sklearn_files/dnn_keras_sklearn_28_0.svg)
+![svg](https://raw.githubusercontent.com/hadleyhzy34/deep-learning/main/deep_neural_network/dnn_keras_sklearn_files/dnn_keras_sklearn_28_0.svg)
     
 
 
