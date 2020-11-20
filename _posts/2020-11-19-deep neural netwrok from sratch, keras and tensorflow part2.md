@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Deep Neural Network from scratch, scikit-learn, keras&Tensorflow part1
+title: Deep Neural Network from scratch, scikit-learn, keras&Tensorflow part2
 key: 20201119
 tags:
   - Python
