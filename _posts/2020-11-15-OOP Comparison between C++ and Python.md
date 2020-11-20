@@ -8,14 +8,6 @@ tags:
   - OOP
 ---
 
-process oriented processing
-oop
-范形编程
-template<typename T, typname U>
-	add add3(T a, U b)-.decltype(a+b){
-	return a+b;
-}
-函数式编程
 
 1. Inheritance
 2. Polymorphism
@@ -313,21 +305,111 @@ private:
 }
 ```
 
+* initializer list is a copy constructor, we don't need and cannot all the assignment operator which means we are avoiding one extra operation.
+* initializer list initializes objects first, even if you do not explicitly initialise them there, the compiler will do for it. const object can only initialised, cannot be assigned
 
 
 2. for initialization of reference members
 3. for initialization of member objects which do not have default constructor
 4. for initialization of base class members
 5. when constructor's parameter name is same as data member
-6. for performance
 
-Reference: https://www.geeksforgeeks.org/when-do-we-use-initializer-list-in-c/
+
+Reference: 
+1. https://www.geeksforgeeks.org/when-do-we-use-initializer-list-in-c/
+2. https://stackoverflow.com/questions/355258/why-must-const-members-be-initialized-in-the-constructor-initializer-rather-than
 
 
 
 #### get and set
 
-#### object pointer and dynamic allocation
+```c++
+class Points{
+    ...
+//set function
+    void setX(int x){
+        this->_x = x;
+    }
+    //get function
+    int getX() const{
+        return this->_x;
+    }
+    //set function
+    void setY(int y){
+        this->_y = y;
+    }
+    //get function
+    int getY() const{
+        return this->_y;
+    }
+    //set function
+    void setXY(int x, int y){
+        this->_x = x;
+        this->_y = y;
+    }
+    ...
+}
+```
+
+#### object initialization with dynamic/static memory
+
+```c++
+    //object pointer
+    Points *point3;
+    point3 = new Points(); 
+    point3->print();
+
+    Points *point4 = new Points(4,4);
+    point4->print();
+
+    //remove storage via delete
+    delete point3;
+    delete point4;
+
+    //object reference
+    Points &point5 = point2;
+    point5.print();
+
+    //object pointer points to already existed object
+    Points *point6 = &point1;
+    point6->print();
+
+    //array of objects with static memory and default constructor
+    Points ptsArray[2];
+    //below is not working since above is already use default constructor for all elements
+    // ptsArray[0] Points();
+    ptsArray->print();
+    ptsArray[1].print();
+    (ptsArray+1)->print();
+
+
+    //array of objects with static memory and customized constructor
+    Points pts_array[3] = {Points(11,11),Points(21,21),Points(31,31)};
+
+    pts_array[0].print();
+    pts_array[1].print();
+    pts_array[2].print();
+
+    //array of object pointers with dynamical memory
+    Points *pts_arrays = new Points[2];
+    pts_arrays[0].print();
+    pts_arrays[1] = Points(41,41);
+    (pts_arrays+1)->print();
+
+    //array of object pointers with dynamical memory using malloc, implicitly calling constructor
+    Points * arr = (Points*)malloc(sizeof(Points)*2);
+    //cannot calling constructor if object data members have const
+    arr[0] = Points();
+    arr[1] = Points(51,51);
+    arr[0].print();
+    arr[1].print();
+
+    //implicitly calling constructor
+    Points point7;
+    point7.print();
+```
+
+
 
 ### Inheritance
 
