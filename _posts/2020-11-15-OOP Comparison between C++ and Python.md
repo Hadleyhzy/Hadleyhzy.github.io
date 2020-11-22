@@ -44,11 +44,21 @@ private:
 
 * create instances:
 ```c++
-//instance initialization implicitly
-Points point1 = Points(1,1);
+//explicit constructor, implicitly copy constructor
+Points point1 = Points(1,1,1);
 
-//instance initialization explicitly
-Points point2(2,2);
+//explicit constructor
+Points point2(2,2,2);
+
+//invoke default constructor, implicitly calling default constructor
+Points point_default;
+
+std::cout<<"default constructor"<<endl;
+
+point_default.print();
+
+//accessing private data member
+std::cout<<point1.getX()<<" "<<point1.getY()<<std::endl;
 
 //print function
 point1.print();
@@ -58,6 +68,9 @@ std::cout<<point1.alias<<std::endl;
 ```
 
 ```
+default constructor
+0 0
+1 1
 1 1
 position of point
 ```
