@@ -44,7 +44,8 @@ private:
 
 * create instances:
 ```c++
-//explicit constructor, implicitly copy constructor
+//create temporary Points using constructor, implicitly call the copy
+//constructor of Points to copy from that temporary into point1
 Points point1 = Points(1,1,1);
 
 //explicit constructor
@@ -336,6 +337,8 @@ Reference:
 
 #### get and set
 
+Public getters and setters for private variables: Member variables are suually declared private to prevent direct access. Instea, public getter and setter are defined to retrieve and modify the private member variable.
+
 ```c++
 class Points{
     ...
@@ -374,6 +377,13 @@ class Points{
 
     Points *point4 = new Points(4,4);
     point4->print();
+
+    //segmentation fault 11 since object pointer will not implicitly call default constructor
+    // Points *ptr_point;
+    // std::cout<<"default pointer of object"<<std::endl;
+    // ptr_point->print();
+    // std::cout<<"default pointer of object"<<std::endl;
+
 
     //remove storage via delete
     delete point3;
@@ -417,14 +427,243 @@ class Points{
     arr[0].print();
     arr[1].print();
 
-    //implicitly calling constructor
-    Points point7;
-    point7.print();
+    //array of object pointers with dynamical memory, this will defautly call constructor
+    Points *ptr_points = new Points[3];
+    ptr_points[1].print();
+    ptr_points[0] = Points(51,51);
+    ptr_points[0].print();
+
+
+```  
+
+### Inheritance
+
+#### Inheritance in Python
+
+* Base class
+
+```python
+class Employee:  #inherits,extend,override
+    def __init__(self,name,age,salary):
+        self.name = name
+        self.age = age
+        self.salary = salary
+    
+    def work(self):
+        print(f"{self.name} is working...")
+```
+
+* child class
+
+```python
+class SoftwareEngineer(Employee):
+    #extend
+    def __init__(self,name,age,salary,level):
+        super().__init__(name,age,salary)
+        self.level = level
+    #overide
+    def work(self):
+        print(f"{self.name} is coding...")
+    
+    def debug(self):
+        print(f"{self.name} is debugging...")
+```
+
+```python
+se = SoftwareEngineer('Max',25,5000,'Junior')
+print(se.name,se.age)
+se.work()
+se.debug()
+```
+
+```
+Max 25
+Max is coding...
+Max is debugging...
+```
+
+* child class
+
+```python
+class Designer(Employee):
+    def drawing(self):
+        print(f"{self.name} is drawing...")
+    #override
+    def work(self):
+        print(f"{self.name} is designing...")
+```
+
+```python
+d = Designer('Philipp',27,7000)
+print(d.name,d.age)
+d.work()
+d.drawing()
+```
+
+```
+Philipp 27
+Philipp is designing...
+Philipp is drawing...
+```
+
+#### Inheritance in Python
+
+* Example
+
+![img](https://raw.githubusercontent.com/hadleyhzy34/OOP-Comparison-between-C-and-Python/main/source/c%2B%2B_inheritance.png)  
+
+##### Subclass header
+```c++
+/* Header for Moving 3D Points with int coords (MovablePoint.h) */
+#ifndef MOVING_POINT_H
+#define MOVING_POINT_H
+ 
+#include "Points.h"   // Include header of the base class
+ 
+class MovablePoint : public Points { // MovablePoint is a subclass of Point
+private:
+   int xSpeed, ySpeed;
+ 
+public:
+   MovablePoint(int x, int y, int xSpeed = 0, int ySpeed = 0);
+   int getXSpeed() const;
+   int getYSpeed() const;
+   void setXSpeed(int xSpeed);
+   void setYSpeed(int ySpeed);
+   void move();
+   void print() const;
+};
+ 
+#endif
+```
+##### Subclass/derived class implementation
+```c++
+#include "MovablePoints.h"   // Include header of the base class
+
+//note that do not set default argument here, otherwise it could cause redefinition issue
+MovablePoint::MovablePoint(int x, int y,int xSpeed,int ySpeed)
+    :Points(x,y),xSpeed(xSpeed),ySpeed(ySpeed){}
+
+int MovablePoint::getXSpeed() const{
+    return xSpeed;
+}
+
+int MovablePoint::getYSpeed() const{
+    return ySpeed;
+}
+
+void MovablePoint::setXSpeed(int xSpeed){
+    this->xSpeed = xSpeed;
+}
+
+void MovablePoint::setYSpeed(int ySpeed){
+    this->ySpeed = ySpeed;
+}
+
+void MovablePoint::print() const{
+    std::cout<<"Movable";
+    Points::print();
+    std::cout<<" Speed="<<xSpeed<<" "<<ySpeed<<std::endl;
+}
+
+void MovablePoint::move(){
+    Points::setX(Points::getX()+xSpeed);
+    Points::setY(Points::getY()+ySpeed);
+}
+```
+
+* When the subclass construct its instance, it must construct a superclass object, which it inherited.
+* The subclass does not have direct access to superclass' private members x and y. To initialize these inherited members, the subclass constructors invokes the superclass constructor which is `public`, in the member initializer list.
+* You need to use the member initializer list to invoke the superclass Point's constructor to initialize the superclass, before initializing the subclass. Object data member can only initialized via member initializer list.
+* If you did not explicitly invoke the superclass' constructor, the compiler implicitly invoke the superclass' default constructor to construct a superclass object.
+* To use the superclass members, use scope resolution operator in the form of `SuperclassName::memberName`. For example, Point::print(), Point::getX().
+{:.warning}  
+
+##### Test driver
+```c++
+/* Test Driver Program for MovablePoint (TestMovablePoint.cpp) */
+#include <iostream>
+#include "Points.h"
+#include "MovablePoints.h"  // included "Point.h"
+ 
+int main() {
+   Points p1(4, 5);  // superclass
+   p1.print();      // Point @ (4,5)
+   std::cout << std::endl;
+ 
+   MovablePoint mp1(11, 22); // subclass, default speed
+   mp1.print();       // MovablePoint @ (11,22) Speed=(0,0)
+   std::cout << std::endl;
+   mp1.setXSpeed(8);
+   mp1.move();
+   mp1.print();       // MovablePoint @ (19,22) Speed=(8,0)
+   std::cout << std::endl;
+ 
+   MovablePoint mp2(11, 22, 33, 44);
+   mp2.print();  // MovablePoint @ (11,22) Speed=(33,44)
+   std::cout << std::endl;
+   mp2.move();
+   mp2.print();  // MovablePoint @ (44,66) Speed=(33,44)
+   std::cout << std::endl;
+}
+```
+
+Note that private data member in the superclass is not accessible in the subclass. For example, in the function `move()` of MovablePoint, you cannot reference `_x` of superclass `Points` directly.
+
+```c++
+void MovablePoint::move() {
+   x += xSpeed;     // error: 'int Point::x' is private
+//   Point::setX(Point::getX() + xSpeed);
+   Point::setY(Point::getY() + ySpeed);
+}
+```
+However, if we make `_x` protected instead of private, the subclass can access `_x` directly.
+
+```c++
+// Superclass Point
+class Point {
+protected:
+   int x, y;
+......
+};   
+
+// Subclass MovablePoint
+class MovablePoint : public Point {
+   ......
+}
+ 
+void MovablePoint::move() {
+   x += xSpeed;
+   y += ySpeed;
+}
 ```
 
 
 
-### Inheritance
+
 
 ### Polymorphism
+
+#### Polymorphism in Python
+
+```python
+employees = [SoftwareEngineer("Max", 25, 6000, "Junior"),
+             SoftwareEngineer("George", 25, 6000, "Junior"),
+             Designer("Lisa", 25, 6000),
+            ]
+```
+
+```python
+def motivate_employees(employees):
+    for employee in employees:
+        employee.work()
+
+motivate_employees(employees)
+```
+
+```
+Max is coding...
+George is coding...
+Lisa is designing...
+```
 
