@@ -636,11 +636,7 @@ void MovablePoint::move() {
    x += xSpeed;
    y += ySpeed;
 }
-```
-
-
-
-
+```  
 
 ### Polymorphism
 
@@ -666,4 +662,7 @@ Max is coding...
 George is coding...
 Lisa is designing...
 ```
+
+#### Polymorphism in C++
+
 
