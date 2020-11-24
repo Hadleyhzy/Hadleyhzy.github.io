@@ -25,6 +25,7 @@ for file in files:
 
 
 
+<!--more-->
 
 ## Pathlib Module
 

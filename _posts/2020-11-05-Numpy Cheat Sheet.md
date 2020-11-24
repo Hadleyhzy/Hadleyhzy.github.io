@@ -23,6 +23,7 @@ array([1, 2, 3, 4, 5])
 >>> print(type(arr))   
 <class 'numpy.ndarray'>
 ```
+<!--more-->
 
 #### array initialization using tuple
 

@@ -39,6 +39,7 @@ P = vectors.T.dot(C.T)
 print(P.T)
 print(P.T.shape)
 ```
+<!--more-->
 
     [[1 2]
      [3 4]

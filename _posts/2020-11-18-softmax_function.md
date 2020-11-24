@@ -17,6 +17,8 @@ tags:
 
 ![equation](https://raw.githubusercontent.com/hadleyhzy34/deep-learning/main/deep_neural_network/source/softmax_functions.png)
 
+<!--more-->
+
 ```python
 import numpy as np
 

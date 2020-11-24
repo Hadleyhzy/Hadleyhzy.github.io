@@ -20,6 +20,8 @@ building neurons => feedforward => Loss(MSE) => backpropagation => Stochastic Gr
 
 ![img](https://raw.githubusercontent.com/hadleyhzy34/deep-learning/main/deep_neural_network/source/neural_network_model.png)
 
+<!--more-->
+
 * MSE:
 
 ![mse](https://raw.githubusercontent.com/hadleyhzy34/deep-learning/main/deep_neural_network/source/MSE.png)

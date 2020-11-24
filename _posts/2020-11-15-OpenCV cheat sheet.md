@@ -28,7 +28,7 @@ Parameters:
 Return Value: returns an image
 
 
-
+<!--more-->
 
 
 ## image basic operation

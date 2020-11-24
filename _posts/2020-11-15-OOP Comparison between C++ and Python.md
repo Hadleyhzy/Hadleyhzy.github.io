@@ -18,7 +18,8 @@ tags:
 
 
 ### C++
-```C++
+
+```c++
 //class
 class Points
 {
@@ -41,6 +42,7 @@ private:
 	int _y;
 };
 ```
+<!--more-->
 
 * create instances:
 ```c++

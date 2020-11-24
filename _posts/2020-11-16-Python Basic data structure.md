@@ -26,7 +26,7 @@ print(back,x)
     [3, 1, 'foo', 'bar']
     bar [3, 1, 'foo']
 
-
+<!--more-->
 
 ```python
 ### Slicing

@@ -20,6 +20,7 @@ In statistics, Bootstrap Sampling is a method that involves drawing of sample da
 
 * Sampling: with respect to statistics, sampling is the process of selectign a subset of items from a vast collection of items to estimate a certain characteristic of the entire population.
 
+<!--more-->
 
 ## Why do we need Bootstrap Sampling?
 

@@ -25,6 +25,7 @@ the decision boundary of each output neuron is linear, perceptrons are incapable
 Perceptron convergence theorem:
 if the training instances are linearly separable, this algorithm would converge to a solution
 
+<!--more-->
 
 ```python
 import numpy as np
