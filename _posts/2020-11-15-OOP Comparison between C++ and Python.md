@@ -667,4 +667,163 @@ Lisa is designing...
 
 #### Polymorphism in C++
 
+##### driver program
+
+```c++
+int main() {
+    //object pointer
+    Points *ptr1 = new MovablePoint(11,12,13,14);
+    ptr1->print(); //run baseClass version->(virtual)->run subclass version
+    delete ptr1;
+
+    //using object reference
+    MovablePoint mp(21,22,23,24);
+    Points *ptr2 = &mp;
+    ptr2->print(); //run baseclass version->(virtual)->run subclass
+
+    //using object with explicit constructor
+    Points p3 = MovablePoint(31,32,33,34); //upcast, create baseclass object using subclass constructor
+    p3.print(); //run baseClass version->virtual->run subclass
+}
+```
+
+Note that a subclass instance(mp) can be substituted for a superclass reference. Once substituted, only the superclass functions can be called, not the subclass' one.
+
+```c++
+// Point.h
+class Points {
+   ......
+   virtual void print() const;
+}
+```
+
+They keyword `virtual` determines which method is used if the method is invoked by a pointer. Without `virtual`, the program chooses the method based on the pointer type. With `virtual`, the program chooses the method based on the type of the object pointed to.
+
+Take note that virtual functions work on object pointers/references, but not on regular objects.
+{:.warning}
+
+* Using keyword virtual on a superclass function makes the function virtual for the superclass, as well as ALL its subclasses.  
+* If a virtual function is invoked using a pointer (or reference), the program uses the method defined for the object type instead of the pointer type. This is called `dynamic binding` or late binding, contrast to static binding during the compile time.  
+* It is recommended that functions to be overridden in the subclass be declared virtual in the superclass.  
+* Constructor can't be virtual, because it is not inherited. Subclass defines its own constructor, which invokes the superclass constructor to initialize the inherited data members.  
+* Destructor should be declared virtual, if a class is to to be used as a superclass, so that the appropriate object destructor is invoked to free the dynamically allocated memory in the subclass, if any.  
+* Friends can't be virtual, as friends are not class member and are not inherited.  
+* If you override function in the subclass, the overridden function shall have the same parameter list as the superclass' version.
+
+
+#### Upcasting VS Downcasting
+
+Normally C++ does not allow you to assign an address of one type to pointer or reference of another type. For example:
+
+```c++
+int i=8;
+double *ptr1 = &i; //error
+double &ref = i;    //error
+```
+
+However, a pointer or reference of superclass can hold a subclass object without explicit type cast:
+
+```c++
+//using object reference
+MovablePoint mp(21,22,23,24);
+Points *ptr2 = &mp;
+Points &ptr2 = mp;
+```
+
+The reverse option, converting a superclass reference or pointer to subclass, is called downcasting. Downcasting requires explicit type cast.
+
+```c++
+//downcast
+Points p4();
+MovablePoint *ptr3 = ptr1;
+MovablePoint *ptr4 = &p4;
+```
+
+```c++
+main1.cpp:23:19: error: cannot initialize a variable of type 'MovablePoint *' with an lvalue of
+      type 'Points *'
+    MovablePoint *ptr3 = ptr1;
+                  ^      ~~~~
+main1.cpp:24:19: error: cannot initialize a variable of type 'MovablePoint *' with an rvalue of
+      type 'Points (*)()'
+    MovablePoint *ptr4 = &p4;
+```
+
+Explicit downcast and `dynamic_cast`  
+
+```c++
+    //downcast implicitly and explicitly
+    Points p4();
+    // MovablePoint *ptr3 = ptr1;
+    // MovablePoint *ptr4 = &p4;
+    std::cout<<"test5: ";
+    MovablePoint *ptr5 = (MovablePoint*)ptr1;
+    ptr5->print();
+    std::cout<<std::endl;
+
+    //downcast using dynamic cast
+    std::cout<<"test6";
+    MovablePoint *ptr6 = dynamic_cast<MovablePoint*>(ptr1);
+    std::cout<<"test6:"<<std::endl;
+    ptr6->print();
+    std::cout<<"test6"<<std::endl;
+```
+
+#### typeid
+
+The operator typeid returns a reference to an object of class `type_info`. You can use `type_info` member function `name()` to get the type name. For example:
+
+```c++
+/* Test Driver Program for MovablePoint (TestMovablePoint.cpp) */
+#include <iostream>
+#include <typeinfo>
+#include "Points.h"
+#include "MovablePoints.h"  // included "Point.h"
+ 
+int main() {
+    //object pointer
+    Points *ptr1 = new MovablePoint(11,12,13,14);
+    std::cout<<typeid(*ptr1).name()<<std::endl;
+
+    MovablePoint *ptr2 = dynamic_cast<MovablePoint*>(ptr1);
+    std::cout<<typeid(*ptr2).name()<<std::endl;
+
+    delete ptr1;
+
+    Points p2;
+    std::cout<<typeid(p2).name()<<std::endl;
+
+    MovablePoint mp2(1,2,3,4);
+    std::cout<<typeid(mp2).name()<<std::endl;
+}
+```
+
+Note that the number in front of the name gives the length of the string.
+{:.warning}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
